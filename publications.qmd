@@ -1,22 +1,27 @@
 ---
-title: "publications"
+title: "Publications"
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r, echo=FALSE, }
-library(scholar)
 # Define the id for SoerenPetersen
 id <- 'prKV9NwAAAAJ' 
 
 # Get his profile and print his name
-l <- get_profile(id)
-l$name 
+l <- scholar::get_profile(id)
+#l$name 
 
 # Get his citation history, i.e. citations to his work in a given year 
-get_citation_history(id)
+# get_citation_history(id)
 
 # Get his publications (a large data frame)
-get_publications(id) |> tibble::tibble()
+publications <- scholar::get_publications(id) |> tibble::tibble()
+
+publications_tbl <- publications |> tibble::tibble() 
+
+# Display the table
+publications_tbl[, c("title", "journal", "year", "cites")] |> 
+  knitr::kable(caption = "List of Publications")
 ```
 
