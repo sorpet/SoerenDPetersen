@@ -14,6 +14,10 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
 
+      # Use the renv action to restore R package dependencies
+      - name: Restore R package dependencies with renv
+        uses: r-lib/actions/setup-renv@v2
+
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
