@@ -4,21 +4,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n\nCombining mechanistic and machine learning models for predictive engineering and optimization of tryptophan metabolism (Nature communications, 2020) - Citations: 217\n\n\nFunctional mining of transporters using synthetic selections (Nature chemical biology, 2016) - Citations: 80\n\n\nModular 5′-UTR hexamers for context-independent tuning of protein expression in eukaryotes (Nucleic acids research, 2018) - Citations: 28\n\n\nHSP70-binding motifs function as protein quality control degrons (Cellular and Molecular Life Sciences, 2023) - Citations: 16\n\n\nSnake Venomics Display: An online toolbox for visualization of snake venomics data (Toxicon, 2018) - Citations: 13\n\n\nCombining mechanistic and machine learning models for predictive engineering and optimization of tryptophan metabolism. Nat. Commun. 11, 4880 (, 2020) - Citations: 7\n\n\nPredictive engineering and optimization of tryptophan metabolism in yeast through a combination of mechanistic and machine learning models (BioRxiv, 2019) - Citations: 4\n\n\nHSP70-binding motifs function as protein quality control degrons (bioRxiv, 2021) - Citations: 3\n\n\nYield prediction in spring barley from spectral reflectance and weather data using machine learning (Soil Use and Management, 2023) - Citations: 2\n\n\nNovel rapid screening assay to incorporate complexity and increase throughput in early-stage plant biological testing (Rhizosphere, 2024) - Citations: 0\n\n\nteemi: An open-source literate programming approach for iterative design-build-test-learn cycles in bioengineering (PLOS Computational Biology, 2024) - Citations: 0\n\n\nLiterate programming for iterative design-build-test-learn cycles in bioengineering (bioRxiv, 2023) - Citations: 0\n\n\nJordpakning: Særlige undersøgelser i Taastrup (Landsforsøgene, 2021) - Citations: 0\n\n\nEffekter på plantevækst i Taastrup samt biologisk jordløsning (Oversigt over Landsforsøgene, 2020) - Citations: 0\n\n\nMethods for predictable and accelerated engineering of metabolism in eukaryotes (The Technical University of Denmark, 2020) - Citations: 0\n\n\nAccurate prediction of the thiamine biosynthetic landscape using Gaussian process learning (Building maps from genetic sequences to biological function, 2019) - Citations: 0\n\n\nEarly Yield Prediction in Spring Barley from Spectral Reflectance and Weather Data Using Machine Learning (Available at SSRN, NA) - Citations: 0"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "SoerenPetersen",
-    "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n\n2024-10-02: test presentation"
   },
   {
     "objectID": "publications.html",
