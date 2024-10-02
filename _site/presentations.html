@@ -94,7 +94,7 @@ ul.task-list li input[type="checkbox"] {
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./publications.html"> 
-<span class="menu-text">publications</span></a>
+<span class="menu-text">Publications</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="./presentations.html" aria-current="page"> 
@@ -121,10 +121,6 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#presentations" id="toc-presentations" class="nav-link active" data-scroll-target="#presentations">Presentations</a></li>
-  <li><a href="#define-the-folder-path-where-presentations-are-stored" id="toc-define-the-folder-path-where-presentations-are-stored" class="nav-link" data-scroll-target="#define-the-folder-path-where-presentations-are-stored">Define the folder path where presentations are stored</a></li>
-  <li><a href="#list-all-files-in-the-presentations-folder" id="toc-list-all-files-in-the-presentations-folder" class="nav-link" data-scroll-target="#list-all-files-in-the-presentations-folder">List all files in the presentations folder</a></li>
-  <li><a href="#sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format" id="toc-sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format" class="nav-link" data-scroll-target="#sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format">Sort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)</a></li>
-  <li><a href="#generate-links-to-each-presentation" id="toc-generate-links-to-each-presentation" class="nav-link" data-scroll-target="#generate-links-to-each-presentation">Generate links to each presentation</a></li>
   </ul>
 </nav>
     </div>
@@ -153,23 +149,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="presentations" class="level1">
 <h1>Presentations</h1>
 <p>Here is a list of available presentations, sorted by date:</p>
-</section>
-<section id="define-the-folder-path-where-presentations-are-stored" class="level1">
-<h1>Define the folder path where presentations are stored</h1>
-<p>presentations_dir &lt;- “presentations/”</p>
-</section>
-<section id="list-all-files-in-the-presentations-folder" class="level1">
-<h1>List all files in the presentations folder</h1>
-<p>presentations &lt;- list.files(path = presentations_dir, pattern = “*.html”, full.names = FALSE)</p>
-</section>
-<section id="sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format" class="level1">
-<h1>Sort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)</h1>
-<p>presentations &lt;- sort(presentations, decreasing = TRUE)</p>
-</section>
-<section id="generate-links-to-each-presentation" class="level1">
-<h1>Generate links to each presentation</h1>
-<p>for (file in presentations) { # Extract the presentation date and title from the filename date &lt;- substr(file, 1, 10) title &lt;- gsub(“_“,” “, substr(file, 12, nchar(file) - 5)) # Removes the date and”.html”</p>
-<p># Create a markdown link for each presentation cat(paste0(“- <a href="&quot;, presentations_dir, file," title=")\n">“, date,”: “, title,”</a>) }</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>- [2024-10-02: test presentation](presentations/2024-10-02_test_presentation.html)</code></pre>
+</div>
+</div>
 
 
 </section>

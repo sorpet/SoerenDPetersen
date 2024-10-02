@@ -1,0 +1,15 @@
+{
+  "hash": "17ed17bb725c99e376d78b47f9064ecc",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Presentations\"\n---\n\n\n\n\n# Presentations\n\nHere is a list of available presentations, sorted by date:\n\n\n\n\n::: {.cell}\n::: {.cell-output .cell-output-stdout}\n\n```\n- [2024-10-02: test presentation](presentations/2024-10-02_test_presentation.html)\n```\n\n\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

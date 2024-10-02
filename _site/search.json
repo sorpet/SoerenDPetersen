@@ -4,7 +4,7 @@
     "href": "presentations.html",
     "title": "Presentations",
     "section": "",
-    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n\nDefine the folder path where presentations are stored\npresentations_dir &lt;- “presentations/”\n\n\nList all files in the presentations folder\npresentations &lt;- list.files(path = presentations_dir, pattern = “*.html”, full.names = FALSE)\n\n\nSort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)\npresentations &lt;- sort(presentations, decreasing = TRUE)\n\n\nGenerate links to each presentation\nfor (file in presentations) { # Extract the presentation date and title from the filename date &lt;- substr(file, 1, 10) title &lt;- gsub(“_“,” “, substr(file, 12, nchar(file) - 5)) # Removes the date and”.html”\n# Create a markdown link for each presentation cat(paste0(“- “, date,”: “, title,”) }"
+    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n\n- [2024-10-02: test presentation](presentations/2024-10-02_test_presentation.html)"
   },
   {
     "objectID": "index.html",
