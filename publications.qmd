@@ -2,26 +2,41 @@
 title: "Publications"
 editor_options: 
   chunk_output_type: console
+  
+format:
+  html:
+    allow-html: true
 ---
 
-```{r, echo=FALSE, }
-# Define the id for SoerenPetersen
+```{r, echo = FALSE, results='asis'}
+# Load necessary libraries
+library(scholar)
+library(tibble)
+
+# Define the id for Soeren Petersen
 id <- 'prKV9NwAAAAJ' 
 
-# Get his profile and print his name
-l <- scholar::get_profile(id)
-#l$name 
-
-# Get his citation history, i.e. citations to his work in a given year 
-# get_citation_history(id)
-
-# Get his publications (a large data frame)
+# Get publications from Google Scholar
 publications <- scholar::get_publications(id) |> tibble::tibble()
 
-publications_tbl <- publications |> tibble::tibble() 
+# Start the table with a little padding between cells
+cat("<table style='border-collapse: separate; border-spacing: 10px;'>\n") # Add spacing between columns
+cat("<tr><th>Title</th><th>Journal</th><th>Year</th><th>Citations</th></tr>\n")
 
-# Display the table
-publications_tbl[, c("title", "journal", "year", "cites")] |> 
-  knitr::kable(caption = "List of Publications")
+# Loop through publications and generate table rows
+for (i in 1:nrow(publications)) {
+  title <- publications$title[i]
+  journal <- publications$journal[i]
+  year <- publications$year[i]
+  cites <- publications$cites[i]
+  pubid <- publications$pubid[i]
+  
+  # Create an HTML link for each publication and output a table row
+  cat(paste0("<tr><td><a href='https://scholar.google.com/citations?view_op=view_citation&hl=en&user=", id, "&citation_for_view=", id, ":", pubid, "'>", title, "</a></td><td>", journal, "</td><td>", year, "</td><td style='padding-left: 20px;'>", cites, "</td></tr>\n"))
+}
+
+# End the table
+cat("</table>\n")
+
+
 ```
-

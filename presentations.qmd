@@ -6,7 +6,7 @@ title: "Presentations"
 
 Here is a list of available presentations, sorted by date:
 
-```{r, echo=FALSE}
+```{r, echo=FALSE, results='asis'}
 
 # Define the folder path where presentations are stored
 presentations_dir <- "presentations/"
@@ -17,14 +17,15 @@ presentations <- list.files(path = presentations_dir, pattern = "*.html", full.n
 # Sort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)
 presentations <- sort(presentations, decreasing = TRUE)
 
-# Generate links to each presentation
+# Generate links to each presentation using HTML
+cat("<ul>\n")
 for (file in presentations) {
   # Extract the presentation date and title from the filename
   date <- substr(file, 1, 10)
   title <- gsub("_", " ", substr(file, 12, nchar(file) - 5)) # Removes the date and ".html"
   
-  # Create a markdown link for each presentation
-  cat(paste0("- [", date, ": ", title, "](", presentations_dir, file, ")\n"))
+  # Create an HTML link for each presentation
+  cat(paste0("<li><a href='", presentations_dir, file, "'>", date, ": ", title, "</a></li>\n"))
 }
-
+cat("</ul>\n")
 ```
