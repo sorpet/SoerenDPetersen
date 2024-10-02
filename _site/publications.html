@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Presentations – SoerenPetersen</title>
+<title>publications – SoerenPetersen</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -93,8 +93,8 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./presentations.html" aria-current="page"> 
-<span class="menu-text">Presentations</span></a>
+    <a class="nav-link" href="./presentations.html"> 
+<span class="menu-text">presentations</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./about.html"> 
@@ -111,25 +111,15 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#presentations" id="toc-presentations" class="nav-link active" data-scroll-target="#presentations">Presentations</a></li>
-  <li><a href="#define-the-folder-path-where-presentations-are-stored" id="toc-define-the-folder-path-where-presentations-are-stored" class="nav-link" data-scroll-target="#define-the-folder-path-where-presentations-are-stored">Define the folder path where presentations are stored</a></li>
-  <li><a href="#list-all-files-in-the-presentations-folder" id="toc-list-all-files-in-the-presentations-folder" class="nav-link" data-scroll-target="#list-all-files-in-the-presentations-folder">List all files in the presentations folder</a></li>
-  <li><a href="#sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format" id="toc-sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format" class="nav-link" data-scroll-target="#sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format">Sort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)</a></li>
-  <li><a href="#generate-links-to-each-presentation" id="toc-generate-links-to-each-presentation" class="nav-link" data-scroll-target="#generate-links-to-each-presentation">Generate links to each presentation</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Presentations</h1>
+<h1 class="title">publications</h1>
 </div>
 
 
@@ -146,29 +136,46 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="presentations" class="level1">
-<h1>Presentations</h1>
-<p>Here is a list of available presentations, sorted by date:</p>
-</section>
-<section id="define-the-folder-path-where-presentations-are-stored" class="level1">
-<h1>Define the folder path where presentations are stored</h1>
-<p>presentations_dir &lt;- “presentations/”</p>
-</section>
-<section id="list-all-files-in-the-presentations-folder" class="level1">
-<h1>List all files in the presentations folder</h1>
-<p>presentations &lt;- list.files(path = presentations_dir, pattern = “*.html”, full.names = FALSE)</p>
-</section>
-<section id="sort-presentations-by-date-assuming-filenames-start-with-a-date-in-yyyy-mm-dd-format" class="level1">
-<h1>Sort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)</h1>
-<p>presentations &lt;- sort(presentations, decreasing = TRUE)</p>
-</section>
-<section id="generate-links-to-each-presentation" class="level1">
-<h1>Generate links to each presentation</h1>
-<p>for (file in presentations) { # Extract the presentation date and title from the filename date &lt;- substr(file, 1, 10) title &lt;- gsub(“_“,” “, substr(file, 12, nchar(file) - 5)) # Removes the date and”.html”</p>
-<p># Create a markdown link for each presentation cat(paste0(“- <a href="&quot;, presentations_dir, file," title=")\n">“, date,”: “, title,”</a>) }</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Søren Dalsgård Petersen"</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>  year cites
+1 2017     8
+2 2018    22
+3 2019    19
+4 2020    32
+5 2021    73
+6 2022    62
+7 2023    88
+8 2024    63</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 17 × 8
+   title                           author journal number cites  year cid   pubid
+   &lt;chr&gt;                           &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;
+ 1 Combining mechanistic and mach… J Zha… "Natur… "11 (…   217  2020 1244… Y0pC…
+ 2 Functional mining of transport… HJ Ge… "Natur… "12 (…    80  2016 3076… 2osO…
+ 3 Modular 5′-UTR hexamers for co… SD Pe… "Nucle… "46 (…    28  2018 4729… UeHW…
+ 4 HSP70-binding motifs function … AB Ab… "Cellu… "80 (…    16  2023 7093… Uebt…
+ 5 Snake Venomics Display: An onl… SH Da… "Toxic… "152,…    13  2018 1056… qjMa…
+ 6 Combining mechanistic and mach… J Zha… ""      ""         7  2020 3900… MXK_…
+ 7 Predictive engineering and opt… J Zha… "BioRx… "8584…     4  2019 6877… KlAt…
+ 8 HSP70-binding motifs function … AB Ab… "bioRx… "2021…     3  2021 4617… YOwf…
+ 9 Yield prediction in spring bar… CT Pe… "Soil … "39 (…     2  2023 7522… 0Eny…
+10 Novel rapid screening assay to… SM Pi… "Rhizo… "30, …     0  2024 &lt;NA&gt;  ULOm…
+11 teemi: An open-source literate… SD Pe… "PLOS … "20 (…     0  2024 &lt;NA&gt;  Zph6…
+12 Literate programming for itera… S Pet… "bioRx… "2023…     0  2023 &lt;NA&gt;  8k81…
+13 Jordpakning: Særlige undersøge… SD Pe… "Lands… "2021…     0  2021 &lt;NA&gt;  roLk…
+14 Effekter på plantevækst i Taas… M Pet… "Overs… "2020…     0  2020 &lt;NA&gt;  Se3i…
+15 Methods for predictable and ac… SD Pe… "The T… ""         0  2020 &lt;NA&gt;  IjCS…
+16 Accurate prediction of the thi… AJ Ri… "Build… "82"       0  2019 &lt;NA&gt;  LkGw…
+17 Early Yield Prediction in Spri… CT Pe… "Avail… "4057…     0    NA &lt;NA&gt;  5nxA…</code></pre>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

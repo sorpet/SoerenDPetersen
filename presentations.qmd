@@ -1,9 +1,27 @@
 ---
-title: "presentations"
+title: "Presentations"
 ---
 
 # Presentations
 
 Here is a list of available presentations, sorted by date:
 
-- [2024-10-02: Test Presentation](presentations/2024-10-02_test_presentation.html)
+```{r, echo=FALSE}
+# Define the folder path where presentations are stored
+presentations_dir <- "presentations/"
+
+# List all files in the presentations folder
+presentations <- list.files(path = presentations_dir, pattern = "*.html", full.names = FALSE)
+
+# Sort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)
+presentations <- sort(presentations, decreasing = TRUE)
+
+# Generate links to each presentation
+for (file in presentations) {
+  # Extract the presentation date and title from the filename
+  date <- substr(file, 1, 10)
+  title <- gsub("_", " ", substr(file, 12, nchar(file) - 5)) # Removes the date and ".html"
+  
+  # Create a markdown link for each presentation
+  cat(paste0("- [", date, ": ", title, "](", presentations_dir, file, ")\n"))
+}

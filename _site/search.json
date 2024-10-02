@@ -2,9 +2,9 @@
   {
     "objectID": "presentations.html",
     "href": "presentations.html",
-    "title": "presentations",
+    "title": "Presentations",
     "section": "",
-    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n2024-10-02: Test Presentation"
+    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n\nDefine the folder path where presentations are stored\npresentations_dir &lt;- “presentations/”\n\n\nList all files in the presentations folder\npresentations &lt;- list.files(path = presentations_dir, pattern = “*.html”, full.names = FALSE)\n\n\nSort presentations by date (assuming filenames start with a date in YYYY-MM-DD format)\npresentations &lt;- sort(presentations, decreasing = TRUE)\n\n\nGenerate links to each presentation\nfor (file in presentations) { # Extract the presentation date and title from the filename date &lt;- substr(file, 1, 10) title &lt;- gsub(“_“,” “, substr(file, 12, nchar(file) - 5)) # Removes the date and”.html”\n# Create a markdown link for each presentation cat(paste0(“- “, date,”: “, title,”) }"
   },
   {
     "objectID": "index.html",
@@ -19,5 +19,12 @@
     "title": "About",
     "section": "",
     "text": "About this site\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "publications",
+    "section": "",
+    "text": "[1] \"Søren Dalsgård Petersen\"\n\n\n  year cites\n1 2017     8\n2 2018    22\n3 2019    19\n4 2020    32\n5 2021    73\n6 2022    62\n7 2023    88\n8 2024    63\n\n\n# A tibble: 17 × 8\n   title                           author journal number cites  year cid   pubid\n   &lt;chr&gt;                           &lt;chr&gt;  &lt;chr&gt;   &lt;chr&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;\n 1 Combining mechanistic and mach… J Zha… \"Natur… \"11 (…   217  2020 1244… Y0pC…\n 2 Functional mining of transport… HJ Ge… \"Natur… \"12 (…    80  2016 3076… 2osO…\n 3 Modular 5′-UTR hexamers for co… SD Pe… \"Nucle… \"46 (…    28  2018 4729… UeHW…\n 4 HSP70-binding motifs function … AB Ab… \"Cellu… \"80 (…    16  2023 7093… Uebt…\n 5 Snake Venomics Display: An onl… SH Da… \"Toxic… \"152,…    13  2018 1056… qjMa…\n 6 Combining mechanistic and mach… J Zha… \"\"      \"\"         7  2020 3900… MXK_…\n 7 Predictive engineering and opt… J Zha… \"BioRx… \"8584…     4  2019 6877… KlAt…\n 8 HSP70-binding motifs function … AB Ab… \"bioRx… \"2021…     3  2021 4617… YOwf…\n 9 Yield prediction in spring bar… CT Pe… \"Soil … \"39 (…     2  2023 7522… 0Eny…\n10 Novel rapid screening assay to… SM Pi… \"Rhizo… \"30, …     0  2024 &lt;NA&gt;  ULOm…\n11 teemi: An open-source literate… SD Pe… \"PLOS … \"20 (…     0  2024 &lt;NA&gt;  Zph6…\n12 Literate programming for itera… S Pet… \"bioRx… \"2023…     0  2023 &lt;NA&gt;  8k81…\n13 Jordpakning: Særlige undersøge… SD Pe… \"Lands… \"2021…     0  2021 &lt;NA&gt;  roLk…\n14 Effekter på plantevækst i Taas… M Pet… \"Overs… \"2020…     0  2020 &lt;NA&gt;  Se3i…\n15 Methods for predictable and ac… SD Pe… \"The T… \"\"         0  2020 &lt;NA&gt;  IjCS…\n16 Accurate prediction of the thi… AJ Ri… \"Build… \"82\"       0  2019 &lt;NA&gt;  LkGw…\n17 Early Yield Prediction in Spri… CT Pe… \"Avail… \"4057…     0    NA &lt;NA&gt;  5nxA…"
   }
 ]
