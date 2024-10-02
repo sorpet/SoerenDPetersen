@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "presentations.html",
+    "href": "presentations.html",
+    "title": "presentations",
+    "section": "",
+    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n2024-10-02: Test Presentation"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "SoerenPetersen",
+    "section": "",
+    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
+  }
+]
