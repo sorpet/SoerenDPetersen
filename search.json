@@ -2,9 +2,16 @@
   {
     "objectID": "presentations.html",
     "href": "presentations.html",
-    "title": "presentations",
+    "title": "Presentations",
     "section": "",
-    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n2024-10-02: Test Presentation"
+    "text": "Presentations\nHere is a list of available presentations, sorted by date:\n\n\n- [2024-10-02: test presentation](presentations/2024-10-02_test_presentation.html)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "index.html",
@@ -14,10 +21,10 @@
     "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites.\n\n1 + 1\n\n[1] 2"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
+    "objectID": "publications.html",
+    "href": "publications.html",
+    "title": "Publications",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "List of Publications\n\n\n\n\n\n\n\n\ntitle\njournal\nyear\ncites\n\n\n\n\nCombining mechanistic and machine learning models for predictive engineering and optimization of tryptophan metabolism\nNature communications\n2020\n217\n\n\nFunctional mining of transporters using synthetic selections\nNature chemical biology\n2016\n80\n\n\nModular 5′-UTR hexamers for context-independent tuning of protein expression in eukaryotes\nNucleic acids research\n2018\n28\n\n\nHSP70-binding motifs function as protein quality control degrons\nCellular and Molecular Life Sciences\n2023\n16\n\n\nSnake Venomics Display: An online toolbox for visualization of snake venomics data\nToxicon\n2018\n13\n\n\nCombining mechanistic and machine learning models for predictive engineering and optimization of tryptophan metabolism. Nat. Commun. 11, 4880\n\n2020\n7\n\n\nPredictive engineering and optimization of tryptophan metabolism in yeast through a combination of mechanistic and machine learning models\nBioRxiv\n2019\n4\n\n\nHSP70-binding motifs function as protein quality control degrons\nbioRxiv\n2021\n3\n\n\nYield prediction in spring barley from spectral reflectance and weather data using machine learning\nSoil Use and Management\n2023\n2\n\n\nNovel rapid screening assay to incorporate complexity and increase throughput in early-stage plant biological testing\nRhizosphere\n2024\n0\n\n\nteemi: An open-source literate programming approach for iterative design-build-test-learn cycles in bioengineering\nPLOS Computational Biology\n2024\n0\n\n\nLiterate programming for iterative design-build-test-learn cycles in bioengineering\nbioRxiv\n2023\n0\n\n\nJordpakning: Særlige undersøgelser i Taastrup\nLandsforsøgene\n2021\n0\n\n\nEffekter på plantevækst i Taastrup samt biologisk jordløsning\nOversigt over Landsforsøgene\n2020\n0\n\n\nMethods for predictable and accelerated engineering of metabolism in eukaryotes\nThe Technical University of Denmark\n2020\n0\n\n\nAccurate prediction of the thiamine biosynthetic landscape using Gaussian process learning\nBuilding maps from genetic sequences to biological function\n2019\n0\n\n\nEarly Yield Prediction in Spring Barley from Spectral Reflectance and Weather Data Using Machine Learning\nAvailable at SSRN\nNA\n0"
   }
 ]
