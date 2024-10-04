@@ -9,6 +9,7 @@ website:
         text: Home
       - publications.qmd
       - presentations.qmd
+      - yield_predictor.qmd
       - about.qmd
 
 format:

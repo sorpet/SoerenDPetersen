@@ -4,7 +4,7 @@ title: "Presentations"
 
 # Presentations
 
-Here is a list of available presentations, sorted by date:
+Examples of external presentations, sorted by date:
 
 ```{r, echo=FALSE, results='asis'}
 

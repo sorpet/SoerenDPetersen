@@ -1,9 +1,11 @@
 {
-  "hash": "950d190cc41896e1d112a7d044bbcc0c",
+  "hash": "2461aedf6d5f8c148acb0ef37bae281e",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"Presentations\"\n---\n\n\n\n\n# Presentations\n\nHere is a list of available presentations, sorted by date:\n\n\n\n\n<ul>\n<li><a href='presentations/2024-10-02_test_presentation.html'>2024-10-02: test presentation</a></li>\n</ul>\n",
-    "supporting": [],
+    "markdown": "---\ntitle: \"Presentations\"\n---\n\n\n\n\n\n# Presentations\n\nExamples of external presentations, sorted by date:\n\n\n\n\n\n<ul>\n<li><a href='presentations/2024-10-02_test_presentation.html'>2024-10-02: test presentation</a></li>\n</ul>\n",
+    "supporting": [
+      "presentations_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],

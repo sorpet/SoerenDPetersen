@@ -1,0 +1,15 @@
+{
+  "hash": "6d578f1b33967132127477a412316438",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"yield_predictor.qmd\"\n---\n\n::: {.cell}\n\n:::\n\n\n\n\nBelow, you can try a yield predictor model similar to model the glm model used in the publication:  \n  *Petersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. *Soil Use and Management*. 39 (2), 975-987*   \n\n\n<iframe src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\"></iframe>\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

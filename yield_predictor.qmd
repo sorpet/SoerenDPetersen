@@ -1,0 +1,26 @@
+---
+title: "yield_predictor.qmd"
+---
+
+```{r, echo = FALSE}
+
+library(scholar)
+library(tibble)
+
+# Define the id for Soeren Petersen
+id <- 'prKV9NwAAAAJ' 
+
+# Get publications from Google Scholar
+publications <- scholar::get_publications(id) |> tibble::tibble() |> dplyr::arrange(desc(year))
+
+formatted_publications <- format_publications(id, "Petersen, S.")
+
+formatted_yield_pred_publication <- formatted_publications[grep("Yield prediction", formatted_publications)]
+
+```
+
+Below, you can try a yield predictor model similar to model the glm model used in the publication:  
+  *`r formatted_yield_pred_publication`*   
+
+
+<iframe src="https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/" width="100%" height="800px"></iframe>
