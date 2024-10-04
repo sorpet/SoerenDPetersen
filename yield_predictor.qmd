@@ -1,5 +1,5 @@
 ---
-title: "yield_predictor.qmd"
+title: "yield_predictor"
 ---
 
 ```{r, echo = FALSE}
@@ -20,6 +20,7 @@ formatted_yield_pred_publication <- formatted_publications[grep("Yield predictio
 ```
 
 Below, you can try a yield predictor model similar to model the glm model used in the publication:  
+
   *`r formatted_yield_pred_publication`*   
 
 

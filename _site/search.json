@@ -16,7 +16,7 @@
   {
     "objectID": "yield_predictor.html",
     "href": "yield_predictor.html",
-    "title": "yield_predictor.qmd",
+    "title": "yield_predictor",
     "section": "",
     "text": "Below, you can try a yield predictor model similar to model the glm model used in the publication:\nPetersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. Soil Use and Management. 39 (2), 975-987"
   },
