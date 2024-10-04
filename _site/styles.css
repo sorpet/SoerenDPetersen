@@ -1,16 +1,28 @@
-/* css styles */
+/* Force containers to take full width */
+#quarto-content,
+#quarto-document-content,
+.quarto-container,
+.page-columns {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 0;
+  margin: 0;
+}
+
+/* Ensure the iframe takes full width */
 .full-width-iframe {
-  width: 100%;
-  max-width: 100%; /* Ensure it doesn't shrink */
+  width: 100% !important;
+  height: 800px !important;
+  max-width: 100% !important;
   display: block;
-  height: 800px; /* Keep height as needed */
 }
 
-iframe {
-  width: 100%;
+/* Hide sidebar if present */
+#quarto-margin-sidebar {
+  display: none;
 }
 
-#quarto-document-content {
-  max-width: 100%; /* Allow content to expand */
+/* Adjust content area */
+.page-columns {
+  display: block;
 }
-
