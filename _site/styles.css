@@ -2,16 +2,24 @@
 .column-page, .page-columns, #quarto-content, #quarto-document-content {
   width: 100% !important;
   max-width: 100% !important;
+  min-width: 100% !important;  /* Ensure no shrinking */
   padding: 0 !important;
   margin: 0 !important;
+  box-sizing: border-box;       /* Ensure consistent box-sizing */
+  flex-grow: 1 !important;      /* Ensure no flexbox constraints */
+  flex-basis: auto !important;  /* Ensure width is not reduced by flexbox */
 }
 
-/* Ensure the iframe stays full width even on larger screens */
+/* Ensure the iframe stays full width across all screens */
 .full-width-iframe {
   width: 100% !important;
   max-width: 100% !important;
+  min-width: 100% !important;  /* Prevent iframe from shrinking */
   display: block;
   height: 800px;
+  box-sizing: border-box;       /* Ensure iframe follows proper box sizing */
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
 /* Disable the sidebar if present */
@@ -19,23 +27,26 @@
   display: none;
 }
 
-/* Make sure no columns are constraining the iframe width */
+/* Ensure no columns are constraining the iframe width */
 .page-columns {
   display: block !important;
   width: 100% !important;
+  min-width: 100% !important;  /* Ensure no shrinkage */
 }
 
 /* Override media queries that cause layout changes */
 @media (min-width: 800px) {
-  .full-width-iframe, .column-page, .page-columns {
+  .full-width-iframe, .column-page, .page-columns, #quarto-content, #quarto-document-content {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 100% !important;
   }
 }
 
 @media (min-width: 1200px) {
-  .full-width-iframe, .column-page, .page-columns {
+  .full-width-iframe, .column-page, .page-columns, #quarto-content, #quarto-document-content {
     width: 100% !important;
     max-width: 100% !important;
+    min-width: 100% !important;
   }
 }
