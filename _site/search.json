@@ -7,6 +7,13 @@
     "text": "Presentations\nExamples of external presentations, sorted by date:\n\n\n2024-10-02: test presentation"
   },
   {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Biologist"
+  },
+  {
     "objectID": "publications.html",
     "href": "publications.html",
     "title": "Publications",
@@ -19,12 +26,5 @@
     "title": "yield_predictor",
     "section": "",
     "text": "Below, you can try a yield predictor model similar to model the glm model used in the publication:\nPetersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. Soil Use and Management. 39 (2), 975-987"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Biologist"
   }
 ]

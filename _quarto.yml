@@ -1,9 +1,11 @@
 project:
   type: website
+  output-dir: _site
 
 website:
-  title: "SoerenPetersen"
+  title: "Søren D. Petersen"
   navbar:
+    search: true
     left:
       - href: index.qmd
         text: Home
@@ -11,6 +13,13 @@ website:
       - presentations.qmd
       - yield_predictor.qmd
       - about.qmd
+    right:
+      - icon: fa-github
+        href: https://github.com/sorpet
+        text: "<i class='fab fa-github'></i> GitHub"
+      - icon: fa-linkedin
+        href: https://www.linkedin.com/in/soerendpetersen  # Replace with your LinkedIn profile URL
+        text: "LinkedIn"
 
 format:
   html:
@@ -18,6 +27,7 @@ format:
     css: styles.css
     toc: true
     page-layout: full
+    fontawesome: true
 
 editor: visual
 
