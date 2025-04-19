@@ -11,8 +11,15 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: yield_predictor.qmd
-        text: Yield predictor
+      - text: Examples of digital tools
+        menu:
+          - href: yield_predictor.qmd
+            text: Yield predictor
+          - href: biofertilizer.qmd
+            text: Biofertilizer network
+          - href: mycoid.qmd
+            text: Sequence Chromatogram Viewer
+
       - text: CV
         href: cv/main.html
       # - about.qmd
