@@ -11,12 +11,13 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - publications.qmd
-      - presentations.qmd
-      - yield_predictor.qmd
+      # - publications.qmd
+      # - presentations.qmd
+      - href: yield_predictor.qmd
+        text: Yield predictor
       - text: CV
         href: cv/main.html
-      - about.qmd
+      # - about.qmd
 
     right:
       - icon: fa-github
