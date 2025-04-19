@@ -32,7 +32,7 @@ formatted_yield_pred_publication <- tryCatch({
 
 ```
 
-Below, you can try a yield predictor model similar to model the glm model used in the publication:
+Below, you can try a yield predictor model similar to the glm model used in the publication:
 
 *`r formatted_yield_pred_publication`*
 
