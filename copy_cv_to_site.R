@@ -1,3 +1,8 @@
+# DOn't run in CI
+if (Sys.getenv("CI") == "true") {
+  stop("copy_cv_to_site.R is intended for local use only.")
+}
+
 # Paths
 source_dir <- "/Users/sorpet/code/1_active/1_personal/cv_html"
 target_dir <- "cv"
