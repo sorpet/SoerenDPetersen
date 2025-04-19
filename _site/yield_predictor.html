@@ -92,10 +92,25 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./yield_predictor.html" aria-current="page"> 
-<span class="menu-text">Yield predictor</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-examples-of-digital-tools" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Examples of digital tools</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-examples-of-digital-tools">    
+        <li>
+    <a class="dropdown-item" href="./yield_predictor.html">
+ <span class="dropdown-text">Yield predictor</span></a>
   </li>  
+        <li>
+    <a class="dropdown-item" href="./biofertilizer.html">
+ <span class="dropdown-text">Biofertilizer network</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./mycoid.html">
+ <span class="dropdown-text">Sequence Chromatogram Viewer</span></a>
+  </li>  
+    </ul>
+  </li>
   <li class="nav-item">
     <a class="nav-link" href="./cv/main.html"> 
 <span class="menu-text">CV</span></a>
@@ -132,7 +147,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<p>Below, you can try a yield predictor model similar to model the glm model used in the publication:</p>
+<p>Below, you can try a yield predictor model similar to the glm model used in the publication:</p>
 <p><em>Petersen, CT., Langgaard, MK., &amp; Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. </em>Soil Use and Management<em>. 39 (2), 975-987</em></p>
 <iframe class="full-width-iframe" src="https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/" width="100%" height="800px">
 </iframe>

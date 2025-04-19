@@ -4,7 +4,6 @@
 
 Below, you can explore a network graph of biofertilizer isolates, cultivars, and functions:
 
-
 <iframe class="full-width-iframe" src="https://f0om03-s0ren-petersen.shinyapps.io/biofertilizer/" width="100%" height="800px">
 
 </iframe>

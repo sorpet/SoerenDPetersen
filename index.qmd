@@ -1,3 +1,17 @@
 ---
-#title: "Søren D. Petersen"
+title: "Søren D. Petersen"
+format: html
 ---
+
+:::{.columns}
+::: {.column width="70%"}
+<div style="font-size: 2rem;">
+I hold a PhD in Microbiology and have concurrently specialized in data science.  
+In my experience, this combination holds considerable untapped potential—both scientifically and commercially.
+</div>
+:::
+
+::: {.column width="30%"}
+![Søren D. Petersen](images/profile.jpg){style="border-radius: 10px; max-width: 100%;"}
+:::
+:::
