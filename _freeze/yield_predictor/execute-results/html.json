@@ -1,9 +1,11 @@
 {
-  "hash": "3d1dcb920ff4ff42f7832a4ecc76a39e",
+  "hash": "05fb4a362e0c8b4702e8da3ad41f6959",
   "result": {
     "engine": "knitr",
-    "markdown": "---\n# title: \"Yield predictor\"\n---\n\n::: {.cell}\n\n:::\n\n\n\nBelow, you can try a yield predictor model similar to model the glm model used in the publication:\n\n*Petersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. *Soil Use and Management*. 39 (2), 975-987*\n\n<iframe class=\"full-width-iframe\" src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\">\n\n</iframe>\n",
-    "supporting": [],
+    "markdown": "---\n# title: \"Yield predictor\"\n---\n\n::: {.cell}\n\n:::\n\n\n\n\nBelow, you can try a yield predictor model similar to model the glm model used in the publication:\n\n*Petersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. *Soil Use and Management*. 39 (2), 975-987*\n\n<iframe class=\"full-width-iframe\" src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\">\n\n</iframe>\n",
+    "supporting": [
+      "yield_predictor_files"
+    ],
     "filters": [
       "rmarkdown/pagebreak.lua"
     ],
