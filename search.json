@@ -1,31 +1,10 @@
 [
   {
-    "objectID": "cv/content/leadership.html",
-    "href": "cv/content/leadership.html",
+    "objectID": "mycoid.html",
+    "href": "mycoid.html",
     "title": "Søren D. Petersen",
     "section": "",
-    "text": "In my PhD project, I unified the different interests and coordinated the efforts of several collaborators across six nationalities spanning both academia and industry, ensuring that we achieved our goal (publication no 5). A particular challenge was securing effective local collaboration in San Francisco between the private company Teselagen and the research institution Joint BioEnergy Institute. I was responsible for the majority of communication between all partners, ensuring that differences in work cultures did not become obstacles and facilitating the integration of their diverse areas of expertise.\nI have continued this coordinating role through my work with Teemi and around the IBT collection as part of the SABS project (Smarter AgroBiological Screening). In the SABS project, I developed the strategy for all activities related to data integration and predictive modelling, including defining data structures and training the team. Teemi protocols were developed for every workflow. Furthermore, I de facto coordinated the implementation of the strategy through daily interactions with the team."
-  },
-  {
-    "objectID": "cv/content/leadership.html#leadership",
-    "href": "cv/content/leadership.html#leadership",
-    "title": "Søren D. Petersen",
-    "section": "",
-    "text": "In my PhD project, I unified the different interests and coordinated the efforts of several collaborators across six nationalities spanning both academia and industry, ensuring that we achieved our goal (publication no 5). A particular challenge was securing effective local collaboration in San Francisco between the private company Teselagen and the research institution Joint BioEnergy Institute. I was responsible for the majority of communication between all partners, ensuring that differences in work cultures did not become obstacles and facilitating the integration of their diverse areas of expertise.\nI have continued this coordinating role through my work with Teemi and around the IBT collection as part of the SABS project (Smarter AgroBiological Screening). In the SABS project, I developed the strategy for all activities related to data integration and predictive modelling, including defining data structures and training the team. Teemi protocols were developed for every workflow. Furthermore, I de facto coordinated the implementation of the strategy through daily interactions with the team."
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Biologist"
-  },
-  {
-    "objectID": "yield_predictor.html",
-    "href": "yield_predictor.html",
-    "title": "Søren D. Petersen",
-    "section": "",
-    "text": "Below, you can try a yield predictor model similar to model the glm model used in the publication:\nPetersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. Soil Use and Management. 39 (2), 975-987"
+    "text": "Below, you can explore a sanger sequence chromatograms:"
   },
   {
     "objectID": "cv/content/research_profile.html",
@@ -40,5 +19,40 @@
     "title": "Søren D. Petersen",
     "section": "",
     "text": "My research centers on accelerating the discovery of antimicrobials and medicinally relevant compounds through high-throughput experimentation, structured data capture, and AI-assisted analysis. With six years of wet lab experience followed by five years as a postdoc, I’ve learned that success in bioengineering often hinges not only on biological insight but also on the number of trials and the ability to test many hypotheses systematically. This calls for a transformation of the knowledge cycle—Design, Build, Test, Learn (DBTL)—into a scalable, efficient, and integrated process.\nAt the core of my approach is the development and deployment of Teemi (publication no 11), a digital tool I designed to streamline experimental planning and execution across DBTL stages. Teemi supports the unambiguous design and automated execution of protocols and enables structured experience capture and sharing. It integrates AI for hypothesis generation and evaluation, and supports programmatic robotic instructions, aligning closely with the strategic ambitions outlined in DTU Bioengineering’s 2026–2029 plan. The use of Teemi has already expanded to the Eukaryotic Molecular Cell Biology research group at the Section for Synthetic Biology, DTU Bioengineering, as well as to the Natural Products Genome Mining research group at The Novo Nordisk Foundation Center for Biosustainability at DTU (DTU Biosustain; publication no 14).\nSince joining the Section for Synthetic Biology at DTU Bioengineering, I have focused on harnessing the potential of the IBT fungal strain collection for high-throughput screening of natural products, particularly in the context of discovering novel antimicrobials and biofungicides. This effort was part of the larger initiative Smarter AgroBiological Screening (SABS), where Teemi played an integral role in structuring and executing systematic experimentation. Building on this success, Teemi is now planned to have a similar role in the upcoming Initiative for Biofertilizer Innovation and Science (IBIS), supporting scalable compound screening across multiple stages of the DBTL cycle. These efforts align closely with DTU’s strategic focus areas: Fungi as a Bioresource and Novel Antimicrobials, and reinforce the department’s commitment to combining biological discovery with computational and robotic technologies.\nI have contributed to pathway engineering efforts aimed at enabling sustainable microbial production of medicinally relevant compounds. These include monoterpenoid indole alkaloids (MIAs) as part of the MIAMI project (publication nos 5 and 11), \\(\\beta\\)-carotene (vitamin A precursor) biosynthesis (publication no. 2), and vitamin B1 (thiamine) production (publication no. 1).\nLooking forward, I envision a research pipeline where AI-driven protocols (e.g., Teemi) are executed by robotic systems, supported by rich datasets from genome-sequenced isolates and multi-omics analyses. These activities build on DTU’s investments in automation, AI, and high-throughput technologies and are designed to dovetail with initiatives like the DTU Arena for Life Science Automation (DALSA) and collaborations with clinical partners such as Technical University Hospital (TUH).\nThis vision of systematic medicinal compound discovery is technically underpinned by tools I’ve developed, and strategically aligned with DTU Bioengineering’s mission to address planetary and human health challenges through mission-driven, interdisciplinary research."
+  },
+  {
+    "objectID": "biofertilizer.html",
+    "href": "biofertilizer.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "Below, you can explore a network graph of biofertilizer isolates, cultivars, and functions:"
+  },
+  {
+    "objectID": "yield_predictor.html",
+    "href": "yield_predictor.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "Below, you can try a yield predictor model similar to model the glm model used in the publication:\nPetersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. Soil Use and Management. 39 (2), 975-987"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Biologist"
+  },
+  {
+    "objectID": "cv/content/leadership.html",
+    "href": "cv/content/leadership.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "In my PhD project, I unified the different interests and coordinated the efforts of several collaborators across six nationalities spanning both academia and industry, ensuring that we achieved our goal (publication no 5). A particular challenge was securing effective local collaboration in San Francisco between the private company Teselagen and the research institution Joint BioEnergy Institute. I was responsible for the majority of communication between all partners, ensuring that differences in work cultures did not become obstacles and facilitating the integration of their diverse areas of expertise.\nI have continued this coordinating role through my work with Teemi and around the IBT collection as part of the SABS project (Smarter AgroBiological Screening). In the SABS project, I developed the strategy for all activities related to data integration and predictive modelling, including defining data structures and training the team. Teemi protocols were developed for every workflow. Furthermore, I de facto coordinated the implementation of the strategy through daily interactions with the team."
+  },
+  {
+    "objectID": "cv/content/leadership.html#leadership",
+    "href": "cv/content/leadership.html#leadership",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "In my PhD project, I unified the different interests and coordinated the efforts of several collaborators across six nationalities spanning both academia and industry, ensuring that we achieved our goal (publication no 5). A particular challenge was securing effective local collaboration in San Francisco between the private company Teselagen and the research institution Joint BioEnergy Institute. I was responsible for the majority of communication between all partners, ensuring that differences in work cultures did not become obstacles and facilitating the integration of their diverse areas of expertise.\nI have continued this coordinating role through my work with Teemi and around the IBT collection as part of the SABS project (Smarter AgroBiological Screening). In the SABS project, I developed the strategy for all activities related to data integration and predictive modelling, including defining data structures and training the team. Teemi protocols were developed for every workflow. Furthermore, I de facto coordinated the implementation of the strategy through daily interactions with the team."
   }
 ]
