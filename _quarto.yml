@@ -11,8 +11,6 @@ website:
     left:
       - href: index.qmd
         text: Home
-      # - publications.qmd
-      # - presentations.qmd
       - href: yield_predictor.qmd
         text: Yield predictor
       - text: CV
