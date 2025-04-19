@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Søren Dalsgård Petersen - CV</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <h1>Curriculum Vitae: Søren Dalsgård Petersen (<span id="cv-date"></span>)</h1>
+
+  <section class="contact-info">
+    <h2>Personal Data</h2>
+    <div class="h2-body">
+      <div class="personal-container">
+        <dl id="personal-data"></dl>
+        <img src="images/profile.jpg" alt="Søren Dalsgård Petersen" class="profile-pic">
+      </div>
+    </div>
+  </section>
+
+  <section class="research-profile">
+    <h2>Research Profile and Vision: High-throughput Discovery of Medicinal Compounds</h2>
+    <div class="h2-body">
+      <div id="research-content"></div>
+    </div>
+  </section>
+
+  <section class="leadership">
+    <h2>Leadership</h2>
+    <div class="h2-body">
+      <div id="leadership-content"></div>
+    </div>
+  </section>
+
+  <!-- <section class="funding">
+      <h2>Funding for high-throughput in Bioengineering</h2>
+      <div class="h2-body"><div id="funding-content"></div></div>
+    </section> -->
+
+  <section class="skills">
+    <h2>Skills</h2>
+    <div class="h2-body">
+      <p>General competencies within data science and microbiology. Some specific competencies:</p>
+
+      <h3 class="subsection-heading">Data science</h3>
+      <dl class="skill-indent">
+        <dt>Programming paradigms</dt>
+        <dd>Functional Programming</dd>
+        <dt>Languages and packages</dt>
+        <dd>Python (NumPy, SciPy, Pandas, Matplotlib, Plotly, Scikit-learn), R (Tidyverse, dplyr, tidyr, purr, ggplot,
+          tidymodels), SQL, BASH</dd>
+        <dt>Software tools</dt>
+        <dd>Git, <a href="https://github.com/sorpet" target="_blank">GitHub</a>, UNIX commands</dd>
+        <dt>Databases</dt>
+        <dd>Design, deployment, and maintenance of relational databases (PostgreSQL)</dd>
+        <dt>Cloud providers</dt>
+        <dd>Amazon Web Services (S3, RDBMS)</dd>
+        <dt>Data science and modelling</dt>
+        <dd>tidymodels, Scikit-learn, H2O (framework for e.g. deep learning), JBEI ART (<a
+            href="https://www.nature.com/articles/s41467-020-18008-4" target="_blank">Automated Recommendation
+            Tool</a>), Teselagen Evolve module</dd>
+      </dl>
+
+      <h3 class="subsection-heading">Microbiology</h3>
+      <dl class="skill-indent">
+        <dt>Organisms</dt>
+        <dd><em>S. cerevisiae</em>, <em>E. coli</em>, and mammalian cells (<em>CHO</em>)</dd>
+        <dt>S. cerevisiae techniques</dt>
+        <dd>Cell culture, CRISPR-Cas9 genome editing, cell library construction</dd>
+        <dt>Molecular biology</dt>
+        <dd>Oligo libraries, USER cloning, Gibson assembly</dd>
+        <dt>Assays</dt>
+        <dd>Flow cytometry and cell sorting, Illumina NGS, Biosensors</dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="education">
+    <h2>Education</h2>
+    <div class="h2-body">
+      <div id="education-content"></div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <h2>Work/professional experience (exclusive teaching)</h2>
+    <div class="h2-body">
+      <div id="experience-content"></div>
+    </div>
+  </section>
+
+
+  <section class="teaching">
+    <h2>Teaching</h2>
+    <div class="h2-body">
+      <h3 class="subsection-heading">Courses</h3>
+      <div id="teaching-courses-content"></div>
+      <h3 class="subsection-heading">Student Supervision</h3>
+      <div id="teaching-students-content"></div>
+
+    </div>
+  </section>
+
+  <section class="communication">
+    <h2>Other communication activities</h2>
+    <div class="h2-body">
+      <h3 class="subsection-heading">National and international peer reviewed conference contributions <span
+          style="font-weight:normal;">(presenters are underscored)</span></h3>
+      <div id="communication-conferences-content"></div>
+
+      <h3 class="subsection-heading">International workshop contributions <span style="font-weight:normal;">(presenters
+          are underscored)</span></h3>
+      <div id="communication-workshops-content"></div>
+
+      <p style="margin-top: 1em;">
+        In addition to the above-mentioned communication activities, I have regularly presented at internal
+        seminars at the Section for Synthetic Biology, DTU; the Novo Nordisk Foundation Center for
+        Biosustainability, DTU; and the Joint BioEnergy Institute, San Francisco.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <section class="publications">
+    <h2>Publications</h2>
+    <div id="publications-content"></div>
+  </section>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],
+      },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="scripts/script.js"></script>
+
+</body>
+
+</html>

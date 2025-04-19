@@ -1,6 +1,8 @@
 project:
   type: website
   output-dir: _site
+  resources:
+    - cv/**
 
 website:
   title: "Søren D. Petersen"
@@ -12,7 +14,10 @@ website:
       - publications.qmd
       - presentations.qmd
       - yield_predictor.qmd
+      - text: CV
+        href: cv/main.html
       - about.qmd
+
     right:
       - icon: fa-github
         href: https://github.com/sorpet

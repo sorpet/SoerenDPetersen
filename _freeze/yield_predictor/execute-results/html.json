@@ -2,7 +2,7 @@
   "hash": "a9173793c27ab624979dd6e96cfae9d5",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: \"yield_predictor\"\n---\n\n::: {.cell}\n\n:::\n\n\n\nBelow, you can try a yield predictor model similar to model the glm model used in the publication:  \n\n  *Petersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. *Soil Use and Management*. 39 (2), 975-987*   \n\n\n<iframe class=\"full-width-iframe\" src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\"></iframe>\n",
+    "markdown": "---\ntitle: \"yield_predictor\"\n---\n\n::: {.cell}\n\n:::\n\n\n\n\nBelow, you can try a yield predictor model similar to model the glm model used in the publication:  \n\n  *Petersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. *Soil Use and Management*. 39 (2), 975-987*   \n\n\n<iframe class=\"full-width-iframe\" src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\"></iframe>\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

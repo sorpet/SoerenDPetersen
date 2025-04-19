@@ -1,0 +1,185 @@
+/* === Layout & Base === */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    line-height: 1.6;
+  }
+  
+  section {
+    margin-bottom: 10px;
+  }
+  
+  .h2-body {
+    margin-left: 15px;
+  }
+  
+  /* === Headings === */
+  h1, h2, h3 {
+    color: #333;
+  }
+  
+  h1 {
+    font-size: 1.55em;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+  }
+  
+  h2 {
+    font-size: 1.1em;
+    border: 1px solid #333;
+    background-color: #C3BD9B;
+    border-radius: 4px;
+    padding: 6px 10px;
+    margin: 0;
+  }
+  
+  .contact-info h2 {
+    margin-bottom: 0;
+  }
+  
+  /* Unified h3 style for Skills and Teaching */
+  .subsection-heading {
+    font-size: 1.07em;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
+    line-height: 1.2;
+  }
+  
+  /* === Lists === */
+  ul {
+    padding-left: 20px;
+  }
+  
+  dl {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    gap: 6px 16px;
+  }
+  
+  dt {
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+  }
+  
+  dd {
+    margin: 0;
+  }
+  
+  /* === Skill Section === */
+  .skills p {
+    margin: 0.2em 0;
+    line-height: 1.3;
+  }
+  
+  .skills h3 + dl.skill-indent {
+    margin-top: 0;
+  }
+  
+  .skill-indent {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    column-gap: 1em;
+    row-gap: 0;
+    align-items: start;
+  }
+  
+  /* === Education Section === */
+  .education-entry {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 1em;
+    margin-bottom: 0.5em;
+    align-items: start;
+  }
+  
+  .education-date {
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .education-role p {
+    margin: 0;
+  }
+  
+  .education-role ul {
+    padding-left: 1em;
+    margin: 5px 0 10px 0;
+  }
+  
+  /* === Teaching Section === */
+  /* h3 styling is now shared with .subsection-heading */
+  
+  /* === Images & Layout === */
+  .profile-pic {
+    width: 120px;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-top: 5px;
+  }
+  
+  .personal-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 0px;
+  }
+  
+  .contact-info dl {
+    margin-top: 2px;
+    padding-top: 0;
+  }
+  
+  /* === Links === */
+  a {
+    color: #0645ad;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  .pub-index {
+    font-weight: bold;
+    margin-right: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .pub-footnote {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 0.3em;
+  }
+  .publications .footnote {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+    text-indent: -1em;
+    color: #555;
+  }
+  .publications sup {
+    font-size: 0.8em;
+    vertical-align: super;
+  }
+  .footnote-section {
+    margin-top: 2em;
+    border-top: 1px solid #ccc;
+    padding-top: 1em;
+  }
+  
+
+  .footnote {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+    padding-left: 1.5em;
+    text-indent: -1em;
+    color: #555;
+  }
+  
