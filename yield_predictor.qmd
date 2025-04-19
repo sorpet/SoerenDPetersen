@@ -2,20 +2,33 @@
 title: "yield_predictor"
 ---
 
-```{r, echo = FALSE}
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
 library(scholar)
 library(tibble)
+library(dplyr)
 
 # Define the id for Soeren Petersen
-id <- 'prKV9NwAAAAJ' 
+id <- 'prKV9NwAAAAJ'
 
 # Get publications from Google Scholar
-publications <- scholar::get_publications(id) |> tibble::tibble() |> dplyr::arrange(desc(year))
+publications <- scholar::get_publications(id) |> 
+  tibble() |> 
+  arrange(desc(year))
 
-formatted_publications <- format_publications(id, "Petersen, S.")
-
-formatted_yield_pred_publication <- formatted_publications[grep("Yield prediction", formatted_publications)]
+# Try formatting the publications
+formatted_yield_pred_publication <- tryCatch({
+  formatted_publications <- scholar::format_publications(id, "Petersen, S.")
+  match <- grep("Yield prediction", formatted_publications)
+  
+  if (length(match) > 0) {
+    formatted_publications[match]
+  } else {
+    "Yield prediction publication not found in scholar profile."
+  }
+}, error = function(e) {
+  "Unable to fetch formatted publication (scholar::format_publications() failed)."
+})
 
 ```
 
