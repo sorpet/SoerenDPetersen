@@ -5,9 +5,9 @@ format: html
 
 :::{.columns}
 ::: {.column width="70%"}
-<div style="font-size: 2rem;">
-I hold a PhD in Microbiology and have concurrently specialized in data science.  
-In my experience, this combination holds considerable untapped potential—both scientifically and commercially.
+<div style="font-size: 1.5rem;">
+I hold a PhD in Microbiology and have, in parallel, specialized in data science. 
+I believe this combination offers significant untapped potential—both scientifically and commercially.
 </div>
 :::
 
