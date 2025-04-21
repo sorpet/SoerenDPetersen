@@ -1,31 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/mycoid.html</loc>
-    <lastmod>2025-04-19T14:38:36.606Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/cv/content/research_profile.html</loc>
-    <lastmod>2025-04-19T14:38:36.601Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/biofertilizer.html</loc>
-    <lastmod>2025-04-19T14:38:36.600Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/yield_predictor.html</loc>
-    <lastmod>2025-04-19T14:38:36.607Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/index.html</loc>
-    <lastmod>2025-04-19T14:38:36.606Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/about.html</loc>
-    <lastmod>2025-04-19T14:38:36.600Z</lastmod>
+    <loc>https://sorpet.github.io/SoerenDPetersen/teemi.html</loc>
+    <lastmod>2025-04-21T08:23:15.311Z</lastmod>
   </url>
   <url>
     <loc>https://sorpet.github.io/SoerenDPetersen/cv/content/leadership.html</loc>
-    <lastmod>2025-04-19T14:38:36.601Z</lastmod>
+    <lastmod>2025-04-21T08:23:15.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/about.html</loc>
+    <lastmod>2025-04-21T08:23:15.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/index.html</loc>
+    <lastmod>2025-04-21T08:23:15.311Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/yield_predictor.html</loc>
+    <lastmod>2025-04-21T08:23:15.311Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/biofertilizer.html</loc>
+    <lastmod>2025-04-21T08:23:15.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/cv/content/research_profile.html</loc>
+    <lastmod>2025-04-21T08:23:15.309Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/mycoid.html</loc>
+    <lastmod>2025-04-21T08:23:15.311Z</lastmod>
   </url>
 </urlset>
