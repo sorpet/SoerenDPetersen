@@ -9,7 +9,7 @@ format: html
 
 I hold a PhD in Microbiology and have, in parallel, specialized in data science. I believe this combination offers significant untapped potential—both scientifically and commercially.
 
-I have primarily created this website to learn the process. But you can also read my CV and see examples of digital tools I have developed.
+I have primarily created this website to learn technical details about the process. But you can also read my CV and see a few examples of digital tools I have developed.
 
 :::
 ::::
