@@ -13,6 +13,8 @@ website:
         text: Home
       - text: Examples of digital tools
         menu:
+          - href: teemi.qmd
+            text: Teemi
           - href: yield_predictor.qmd
             text: Yield predictor
           - href: biofertilizer.qmd

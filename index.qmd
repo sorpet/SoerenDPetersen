@@ -1,17 +1,20 @@
 ---
-title: "Søren D. Petersen"
+#title: "Søren D. Petersen"
 format: html
 ---
 
-:::{.columns}
-::: {.column width="70%"}
-<div style="font-size: 1.5rem;">
-I hold a PhD in Microbiology and have, in parallel, specialized in data science. 
-I believe this combination offers significant untapped potential—both scientifically and commercially.
-</div>
+:::::: columns
+:::: {.column width="70%"}
+::: {style="font-size: 1.5rem;"}
+
+I hold a PhD in Microbiology and have, in parallel, specialized in data science. I believe this combination offers significant untapped potential—both scientifically and commercially.
+
+I have primarily created this website to learn the process. But you can also read my CV and see examples of digital tools I have developed.
+
 :::
+::::
 
 ::: {.column width="30%"}
 ![Søren D. Petersen](images/profile.jpg){style="border-radius: 10px; max-width: 100%;"}
 :::
-:::
+::::::

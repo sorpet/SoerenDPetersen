@@ -1,0 +1,38 @@
+---
+# title: "teemi"
+---
+
+```{r, echo = FALSE, message = FALSE, warning = FALSE}
+
+library(scholar)
+library(tibble)
+library(dplyr)
+
+# Define the id for Soeren Petersen
+id <- 'prKV9NwAAAAJ'
+
+# Get publications from Google Scholar
+publications <- scholar::get_publications(id) |> 
+  tibble() |> 
+  arrange(desc(year))
+
+# Try formatting the publications
+formatted_teemi_publication <- tryCatch({
+  formatted_publications <- scholar::format_publications(id, "Petersen, S.")
+  match <- grep("Teemi", formatted_publications)
+  
+  if (length(match) > 0) {
+    formatted_publications[match]
+  } else {
+    "Teemi publication not found in scholar profile."
+  }
+}, error = function(e) {
+  "Unable to fetch formatted publication (scholar::format_publications() failed)."
+})
+
+```
+
+Teemi is an open-source Python platform for literate, data-driven engineering of biosystems, supporting simulation, structured data capture, and AI-assisted design under FAIR principles. I led its conceptualization and development to streamline the DBTL cycle, enabling scalable, automated, and hypothesis-driven experimentation in synthetic biology. See reference below:
+
+*`r formatted_teemi_publication`*
+
