@@ -39,7 +39,7 @@
     "href": "yield_predictor.html",
     "title": "Søren D. Petersen",
     "section": "",
-    "text": "Below, you can try a yield predictor model similar to the glm model used in the publication:\nPetersen, CT., Langgaard, MK., & Petersen, SD. (2023). Yield prediction in spring barley from spectral reflectance and weather data using machine learning. Soil Use and Management. 39 (2), 975-987"
+    "text": "Below, you can try a yield predictor model similar to the glm model used in the publication:\n[1] C. T. Petersen, M. K. Langgaard, and S. D. Petersen. “Yield Prediction in Spring Barley from Spectral Reflectance and Weather Data Using Machine Learning”. In: Soil Use and Management* 39.2 (2023), pp. 975-987. ISSN: 1475-2743. DOI: 10.1111/sum.12902. https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12902 (visited on 10/28/2024).*"
   },
   {
     "objectID": "cv/content/research_profile.html",
@@ -74,6 +74,27 @@
     "href": "index.html",
     "title": "Søren D. Petersen",
     "section": "",
-    "text": "I hold a PhD in Microbiology and have, in parallel, specialized in data science. I believe this combination offers significant untapped potential—both scientifically and commercially.\nI have primarily created this website to learn the process. But you can also read my CV and see examples of digital tools I have developed.\n\n\n\n\n\nSøren D. Petersen"
+    "text": "I hold a PhD in Microbiology and have, in parallel, specialized in data science. I believe this combination offers significant untapped potential—both scientifically and commercially.\nI have primarily created this website to learn technical details about the process. But you can also read my CV and see a few examples of digital tools I have developed.\n\n\n\n\n\nSøren D. Petersen"
+  },
+  {
+    "objectID": "teemi.html",
+    "href": "teemi.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "Teemi is an open-source Python platform for literate, data-driven engineering of biosystems, supporting simulation, structured data capture, and AI-assisted design under FAIR principles. I led its conceptualization and development to streamline the DBTL cycle, enabling scalable, automated, and hypothesis-driven experimentation in synthetic biology. See reference below:\n[1] S. D. Petersen, L. Levassor, C. M. Pedersen, et al. “Teemi: An Open-Source Literate Programming Approach for Iterative Design-Build-Test-Learn Cycles in Bioengineering”. In: PLOS Computational Biology 20.3 (Mar. 2024), p. e1011929. ISSN: 1553-7358. DOI: 10.1371/journal.pcbi.1011929. https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011929 (visited on 10/28/2024)."
+  },
+  {
+    "objectID": "cv/content/publication_summary.html",
+    "href": "cv/content/publication_summary.html",
+    "title": "Publication summary",
+    "section": "",
+    "text": "Publication summary\n\nTotal publications: 16 (5 as first author)\nH-index = 5 (Google Scholar/May 2025).\nTotal citations: 422 (Google Scholar/May 2025)\nORCID ID: 0000-0003-4104-5144"
+  },
+  {
+    "objectID": "cv/content/funding.html",
+    "href": "cv/content/funding.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "2019 Sep – 2019 Dec\n\n\n&lt;p&gt;Research stay at Lawrence Berkeley National Laboratory (LBNL), Berkeley, California, USA. Total received: &lt;strong&gt;DKK 84,500&lt;/strong&gt;.&lt;/p&gt;\n\n\n\n\n2015 Jul\n\n\n&lt;p&gt;Conference International Synthetic and Systems Biology Summer School (SSBSS) at Taormina, Sicily, Italy. Total received: &lt;strong&gt;DKK 5,000&lt;/strong&gt;.&lt;/p&gt;\n\n\n\n\n2014 Feb – 2014 Jul\n\n\n&lt;p&gt;Exchange stay at Eidgenössische Technische Hochschule Zürich (ETH), Zürich, Switzerland. Total received: &lt;strong&gt;DKK 55,000&lt;/strong&gt;.&lt;/p&gt;\n\n\n\n\n2012 Sep – 2012 Dec\n\n\n&lt;p&gt;Exchange stay at University of Maryland (UMD), College Park, Maryland, USA. Total received: &lt;strong&gt;DKK 40,000&lt;/strong&gt;.&lt;/p&gt;"
   }
 ]

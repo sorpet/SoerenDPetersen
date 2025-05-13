@@ -1,0 +1,15 @@
+{
+  "hash": "113e92cc2397afe3cd305b174264f054",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\n# title: \"teemi\"\n---\n\n\n\n\n\nTeemi is an open-source Python platform for literate, data-driven engineering of biosystems, supporting simulation, structured data capture, and AI-assisted design under FAIR principles. I led its conceptualization and development to streamline the DBTL cycle, enabling scalable, automated, and hypothesis-driven experimentation in synthetic biology. See reference below:\n\n*[1] S. D. Petersen, L. Levassor, C. M. Pedersen, et al. \"Teemi: An\nOpen-Source Literate Programming Approach for Iterative\nDesign-Build-Test-Learn Cycles in Bioengineering\". In: _PLOS\nComputational Biology_ 20.3 (Mar. 2024), p. e1011929. ISSN: 1553-7358.\nDOI: 10.1371/journal.pcbi.1011929.\n<https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011929>\n(visited on 10/28/2024).*\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

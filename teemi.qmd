@@ -2,38 +2,40 @@
 # title: "teemi"
 ---
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
+```{r, include=FALSE}
+library(httr)
+library(stringr)
+library(glue)
+library(RefManageR)
 
-# library(scholar)
-# library(tibble)
-# library(dplyr)
-# 
-# # Define the id for Soeren Petersen
-# id <- 'prKV9NwAAAAJ'
-# 
-# # Get publications from Google Scholar
-# publications <- scholar::get_publications(id) |> 
-#   tibble() |> 
-#   arrange(desc(year))
-# 
-# # Try formatting the publications
-# formatted_teemi_publication <- tryCatch({
-#   formatted_publications <- scholar::format_publications(id, "Petersen, S.")
-#   match <- grep("Teemi", formatted_publications)
-#   
-#   if (length(match) > 0) {
-#     formatted_publications[match]
-#   } else {
-#     "Teemi publication not found in scholar profile."
-#   }
-# }, error = function(e) {
-#   "Unable to fetch formatted publication (scholar::format_publications() failed)."
-# })
+get_gdrive_download_link <- function(url) {
+  file_id <- str_extract(url, "(?<=/d/)[^/]+")
+  glue("https://drive.google.com/uc?export=download&id={file_id}")
+}
 
-#*`r formatted_teemi_publication`*
+url_bib_gdrive <- "https://drive.google.com/file/d/1gmCUhK2W5I36RmW7uQTBzoJbUhon1SPf/view?usp=sharing"
+bib_url <- get_gdrive_download_link(url_bib_gdrive)
+temp_bib <- tempfile(fileext = ".bib")
+httr::GET(bib_url, httr::write_disk(temp_bib, overwrite = TRUE))
+bib_path <- temp_bib
+
+bib_entries <- ReadBib(bib_path, check = FALSE, .Encoding = "UTF-8")
+
+# Find and format the teemi entry
+teemi_entry <- bib_entries[which(str_detect(tolower(bib_entries$title), "teemi"))]
+
+if (length(teemi_entry) > 0) {
+  teemi_citation <- paste(format(teemi_entry), collapse = " ")
+  teemi_citation <- str_replace_all(teemi_citation, "S\\.D\\. Petersen", "**S.D. Petersen**")
+  teemi_citation <- paste0("*", teemi_citation, "*")
+} else {
+  teemi_citation <- "Teemi publication not found."
+}
 
 ```
 
 Teemi is an open-source Python platform for literate, data-driven engineering of biosystems, supporting simulation, structured data capture, and AI-assisted design under FAIR principles. I led its conceptualization and development to streamline the DBTL cycle, enabling scalable, automated, and hypothesis-driven experimentation in synthetic biology. See reference below:
 
-Petersen SD, Levassor L, Pedersen CM, Madsen J, Hansen LG, Zhang J, Haidar AK, Frandsen RJN, Keasling JD, Weber T, Sonnenschein N, Jensen MK (2024). Teemi: An Open-Source Literate Programming Approach for Iterative Design-Build-Test-Learn Cycles in Bioengineering. PLOS Computational Biology.
+`r teemi_citation`
+
+

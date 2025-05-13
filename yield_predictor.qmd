@@ -1,40 +1,47 @@
 ---
 # title: "Yield predictor"
+editor_options: 
+  chunk_output_type: console
 ---
 
-```{r, echo = FALSE, message = FALSE, warning = FALSE}
 
-library(scholar)
-library(tibble)
-library(dplyr)
+```{r, include=FALSE}
+library(httr)
+library(stringr)
+library(glue)
+library(RefManageR)
 
-# Define the id for Soeren Petersen
-id <- 'prKV9NwAAAAJ'
+get_gdrive_download_link <- function(url) {
+  file_id <- str_extract(url, "(?<=/d/)[^/]+")
+  glue("https://drive.google.com/uc?export=download&id={file_id}")
+}
 
-# Get publications from Google Scholar
-publications <- scholar::get_publications(id) |> 
-  tibble() |> 
-  arrange(desc(year))
+url_bib_gdrive <- "https://drive.google.com/file/d/1gmCUhK2W5I36RmW7uQTBzoJbUhon1SPf/view?usp=sharing"
+bib_url <- get_gdrive_download_link(url_bib_gdrive)
+temp_bib <- tempfile(fileext = ".bib")
+httr::GET(bib_url, httr::write_disk(temp_bib, overwrite = TRUE))
+bib_path <- temp_bib
 
-# Try formatting the publications
-formatted_yield_pred_publication <- tryCatch({
-  formatted_publications <- scholar::format_publications(id, "Petersen, S.")
-  match <- grep("Yield prediction", formatted_publications)
-  
-  if (length(match) > 0) {
-    formatted_publications[match]
-  } else {
-    "Yield prediction publication not found in scholar profile."
-  }
-}, error = function(e) {
-  "Unable to fetch formatted publication (scholar::format_publications() failed)."
-})
+bib_entries <- ReadBib(bib_path, check = FALSE, .Encoding = "UTF-8")
+
+# Find and format the yield entry
+yield_entry <- bib_entries[which(str_detect(tolower(bib_entries$title), "yield prediction"))]
+
+if (length(yield_entry) > 0) {
+  yield_citation <- paste(format(yield_entry), collapse = " ")
+  yield_citation <- str_replace_all(yield_citation, "S\\.D\\. Petersen", "**S.D. Petersen**")
+  yield_citation <- str_replace_all(yield_citation, "_([^_]+)_", "*\\1*")  # Convert _..._ to *...* for journal only
+  yield_citation <- str_replace_all(yield_citation, "S\\.D\\. Petersen", "**S.D. Petersen**")
+} else {
+  yield_citation <- "Yield publication not found."
+}
 
 ```
 
+
 Below, you can try a yield predictor model similar to the glm model used in the publication:
 
-*`r formatted_yield_pred_publication`*
+*`r yield_citation`*
 
 <iframe class="full-width-iframe" src="https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/" width="100%" height="800px">
 

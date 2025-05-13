@@ -2,84 +2,39 @@ const date = new Date();
 const options = { year: 'numeric', month: 'long' };
 document.getElementById('cv-date').textContent = date.toLocaleDateString('en-GB', options);
 
-// Load and render personal data, stripping first-level Markdown header
-fetch("content/personal_data.html")
-  .then(res => res.text())
-  .then(html => {
-    document.getElementById("personal-data").innerHTML = html;
-  })
-  .catch(err => console.error("Could not load personal data:", err));
+// Helper to load and render content sections
+function loadSection(id, url, { stripHeader = false, parseMarkdown = false, math = false } = {}) {
+  fetch(url)
+    .then(res => {
+      if (!res.ok) throw new Error(`HTTP error ${res.status}`);
+      return res.text();
+    })
+    .then(text => {
+      let content = text;
+      if (stripHeader) {
+        content = content.replace(/^#.*\n/, '');
+      }
+      if (parseMarkdown) {
+        content = marked.parse(content);
+      }
+      document.getElementById(id).innerHTML = content;
+      if (math && window.MathJax) {
+        MathJax.typeset();
+      }
+    })
+    .catch(err => console.error(`Failed to load ${url}:`, err));
+}
 
-
-// Load and render research profile, stripping first-level Markdown header
-fetch("content/research_profile.md")
-  .then(res => res.text())
-  .then(md => {
-    const cleaned = md
-      .replace(/^#.*\n/, '');             // strip top-level header
-      // .replace(/\\beta/g, '$\\beta$');   // wrap \beta in $...$
-    document.getElementById("research-content").innerHTML = marked.parse(cleaned);
-    MathJax.typeset();                   // ✅ this triggers MathJax rendering
-  })
-  .catch(err => console.error("Could not load research profile:", err));
-
-
-// Load and render leadership section, stripping first-level Markdown header
-fetch("content/leadership.md")
-  .then(res => res.text())
-  .then(md => {
-    const cleaned = md.replace(/^#.*\n/, ''); // removes top-level heading
-    document.getElementById("leadership-content").innerHTML = marked.parse(cleaned);
-  })
-  .catch(err => console.error("Could not load leadership content:", err));
-
-fetch("content/funding.md")
-  .then(res => res.text())
-  .then(md => {
-    const cleaned = md.replace(/^#.*\n/, ''); // remove top-level header
-    document.getElementById("funding-content").innerHTML = marked.parse(cleaned);
-  })
-  .catch(err => console.error("Could not load funding content:", err));
-
-fetch('content/education.html')
-  .then(res => res.text())
-  .then(md => {
-    document.getElementById('education-content').innerHTML = md;
-  });
-
-fetch('content/work_experience.html')
-  .then(res => res.text())
-  .then(md => {
-    document.getElementById('experience-content').innerHTML = md;
-  });
-
-fetch('content/teaching_courses.html')
-  .then(res => res.text())
-  .then(md => {
-    document.getElementById('teaching-courses-content').innerHTML = marked.parse(md);
-  });
-
-fetch('content/teaching_students.html')
-  .then(res => res.text())
-  .then(md => {
-    document.getElementById('teaching-students-content').innerHTML = marked.parse(md);
-  });
-
-
-fetch('content/communication_conferences.html')
-  .then(res => res.text())
-  .then(md => {
-    document.getElementById('communication-conferences-content').innerHTML = md;
-  });
-
-fetch('content/communication_workshops.html')
-  .then(res => res.text())
-  .then(md => {
-    document.getElementById('communication-workshops-content').innerHTML = md;
-  });
-
-fetch('content/publications.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('publications-content').innerHTML = data;
-  });
+// Load all sections (pre-rendered HTML for Markdown files via build step)
+loadSection('personal-data', 'content/personal_data.html');
+loadSection('research-content', 'content/research_profile.html', { math: true });
+loadSection('leadership-content', 'content/leadership.html');
+loadSection('funding-content', 'content/funding.html');
+loadSection('education-content', 'content/education.html');
+loadSection('experience-content', 'content/work_experience.html');
+loadSection('teaching-courses-content', 'content/teaching_courses.html');
+loadSection('teaching-students-content', 'content/teaching_students.html');
+loadSection('communication-conferences-content', 'content/communication_conferences.html');
+loadSection('communication-workshops-content', 'content/communication_workshops.html');
+loadSection('publication-summary-content', 'content/publication_summary.html');
+loadSection('publications-content', 'content/publications.html');

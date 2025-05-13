@@ -6,6 +6,12 @@ body {
     padding: 20px;
     line-height: 1.6;
   }
+/* === Theme Variables === */
+:root {
+  --primary-bg: #C3BD9B;
+  --heading-color: #333;
+  --link-color: #0645ad;
+}
   
   section {
     margin-bottom: 10px;
@@ -16,8 +22,8 @@ body {
   }
   
   /* === Headings === */
-  h1, h2, h3 {
-    color: #333;
+h1, h2, h3 {
+    color: var(--heading-color);
   }
   
   h1 {
@@ -28,8 +34,8 @@ body {
   
   h2 {
     font-size: 1.1em;
-    border: 1px solid #333;
-    background-color: #C3BD9B;
+    border: 1px solid var(--heading-color);
+    background-color: var(--primary-bg);
     border-radius: 4px;
     padding: 6px 10px;
     margin: 0;
@@ -135,8 +141,8 @@ body {
   }
   
   /* === Links === */
-  a {
-    color: #0645ad;
+ a {
+    color: var(--link-color);
     text-decoration: none;
   }
   
@@ -180,6 +186,31 @@ body {
     margin-top: 0.5em;
     padding-left: 1.5em;
     text-indent: -1em;
-    color: #555;
+  color: #555;
   }
+/* === Utility Classes === */
+.annotation {
+  font-weight: normal;
+}
+.section-note {
+  margin-top: 1em;
+}
+
+/* === Mobile Responsiveness === */
+@media (max-width: 600px) {
+  .h2-body {
+    margin-left: 0;
+  }
+  .personal-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .skill-indent,
+  .education-entry {
+    grid-template-columns: 1fr;
+  }
+  body {
+    padding: 10px;
+  }
+}
   
