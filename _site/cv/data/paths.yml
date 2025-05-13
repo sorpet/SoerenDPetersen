@@ -1,0 +1,53 @@
+funding:
+  xlsx_gdrive: https://docs.google.com/spreadsheets/d/16n2xNlNDAR5zjgG3LBhWsWrCE7yYDr7M/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  md: content_md/funding.md
+
+teaching:
+  - name: courses
+    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1acOnUwsMcLEQp4L8TvKV0Gw0MVJ3kUXw/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    csv: data/teaching_courses.csv
+    html: content_html/teaching_courses.html
+  - name: students
+    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1O06kA-TYP_TutdPNspr6CsGYCpGDLDZJ/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    csv: data/teaching_students.csv
+    html: content_html/teaching_students.html
+
+publications:
+  bib_gdrive: https://drive.google.com/file/d/1gmCUhK2W5I36RmW7uQTBzoJbUhon1SPf/view?usp=sharing
+  bib: data/publications.bib
+  html: content_html/publications.html
+
+# Configuration for automatic publication summary
+publication_summary:
+  # Path to output markdown for publication summary
+  md: content_md/publication_summary.md
+  # Google Scholar author ID
+  scholar_id: prKV9NwAAAAJ
+  # ORCID identifier
+  orcid: "0000-0003-4104-5144"
+
+personal_data:
+  csv_gdrive: https://drive.google.com/file/d/1GXrVbxLNZg4Pl5dHe_V5tKHfZTMiwlhO/view?usp=sharing
+  csv: data/personal_data.csv
+  html: content_html/personal_data.html
+
+education:
+  xlsx_gdrive: https://docs.google.com/spreadsheets/d/1f53i3UHINbN2Y4irjcp3B57S0Rb4pSCu/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  xlsx: data/education.xlsx
+  html: content_html/education.html
+
+communications:
+  - name: conferences
+    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1NCTJLN8AEzJYNL77bgo0W5IMZl_5f2pT/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    csv: data/communication_conferences.csv
+    html: content_html/communication_conferences.html
+  - name: workshops
+    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1AMUyZiRJcb84obRrtMW3x_-MSiA6oSzj/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    csv: data/communication_workshops.csv
+    html: content_html/communication_workshops.html
+
+work_experience:
+  xlsx_gdrive: https://docs.google.com/spreadsheets/d/1dvk_ABNWb9Ccp1rNSxKIVmKt14TAtqyD/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  csv: data/work_experience.csv
+  html: content_html/work_experience.html
+

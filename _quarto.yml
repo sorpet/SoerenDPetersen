@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: _site
   resources:
-    - cv/**
+    - "cv/**"
 
 website:
   title: "Søren D. Petersen"
@@ -13,8 +13,6 @@ website:
         text: Home
       - text: Examples of digital tools
         menu:
-          - href: teemi.qmd
-            text: Teemi
           - href: yield_predictor.qmd
             text: Yield predictor
           - href: biofertilizer.qmd

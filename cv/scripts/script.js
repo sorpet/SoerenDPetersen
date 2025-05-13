@@ -26,15 +26,15 @@ function loadSection(id, url, { stripHeader = false, parseMarkdown = false, math
 }
 
 // Load all sections (pre-rendered HTML for Markdown files via build step)
-loadSection('personal-data', 'content/personal_data.html');
-loadSection('research-content', 'content/research_profile.html', { math: true });
-loadSection('leadership-content', 'content/leadership.html');
-loadSection('funding-content', 'content/funding.html');
-loadSection('education-content', 'content/education.html');
-loadSection('experience-content', 'content/work_experience.html');
-loadSection('teaching-courses-content', 'content/teaching_courses.html');
-loadSection('teaching-students-content', 'content/teaching_students.html');
-loadSection('communication-conferences-content', 'content/communication_conferences.html');
-loadSection('communication-workshops-content', 'content/communication_workshops.html');
-loadSection('publication-summary-content', 'content/publication_summary.html');
-loadSection('publications-content', 'content/publications.html');
+loadSection('personal-data', 'content_html/personal_data.html');
+loadSection('research-content', 'content_html/research_profile.html', { math: true });
+loadSection('leadership-content', 'content_html/leadership.html');
+loadSection('funding-content', 'content_html/funding.html');
+loadSection('education-content', 'content_html/education.html');
+loadSection('experience-content', 'content_html/work_experience.html');
+loadSection('teaching-courses-content', 'content_html/teaching_courses.html');
+loadSection('teaching-students-content', 'content_html/teaching_students.html');
+loadSection('communication-conferences-content', 'content_html/communication_conferences.html');
+loadSection('communication-workshops-content', 'content_html/communication_workshops.html');
+loadSection('publication-summary-content', 'content_html/publication_summary.html');
+loadSection('publications-content', 'content_html/publications.html');

@@ -1,0 +1,6 @@
+# tell Quarto to completely skip anything under cv/content that isn’t already
+# a static HTML asset
+
+cv/content/*.md
+cv/content/*.qmd
+cv/*.qmd
