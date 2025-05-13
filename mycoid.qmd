@@ -1,9 +1,0 @@
----
-# title: ""
----
-
-Below, you can explore a sanger sequence chromatograms:
-
-<iframe class="full-width-iframe" src="https://f0om03-s0ren-petersen.shinyapps.io/mycoid/" width="100%" height="800px">
-
-</iframe>
