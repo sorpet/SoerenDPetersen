@@ -9,6 +9,12 @@ library(here)
 library(yaml)
 library(htmltools)
 
+# https://www.landbrugsinfo.dk/-/media/landbrugsinfo/public/7/e/a/pm/_20/_3865/_oversigten2020/_249-253.pdf
+# https://www.landbrugsinfo.dk/-/media/landbrugsinfo/public/7/e/a/pm/_20/_3865/_oversigten2020/_249-253.pdf
+#
+
+"https://www.landbrugsinfo.dk/-/media/landbrugsinfo/public/7/e/a/pm_20_3865_oversigten2020_249-253.pdf" |> clean_url()
+
 #source(here("R/utils_cv.R"))
 
 #--------- Configuration ---------#
@@ -101,13 +107,19 @@ clean_latex <- function(x) {
     str_replace_all("\\\\%", "%") %>%
     str_replace_all("\\\\&", "&") %>%
     str_replace_all("\\\\_", "_") %>%
-    str_replace_all("\\\\", "") %>%
+    # str_replace_all("\\\\", "") %>%
     str_replace_all("--", "–") %>%
     str_replace_all("\\.\\.", ".") %>%
     str_replace_all("\\{\\\\v\\{([cCsSzZ])\\}\\}", "\u030C\\1") %>%  # caron: č, š, ž (uses combining caron)
     str_replace_all("\\{\\\\=\\{([aeiouAEIOU])\\}\\}", "\u0304\\1") %>%  # macron: ū, ā, etc. (combining macron)
     str_squish() %>%
     str_remove("\\.$")
+}
+
+clean_url <- function(url) {
+  url %>%
+    str_replace_all("\\\\_", "_") %>%  # unescape LaTeX-style underscores
+    gsub("(?<=/)(_|%5[Ff])(?=[0-9a-zA-Z]*-)", "", ., perl = TRUE)
 }
 
 
@@ -211,6 +223,7 @@ bib_df <- tibble::tibble(
     publisher = clean_latex(publisher),
     pages = clean_latex(pages),
     year = as.character(year),
+    url = clean_url(url),
     doi = as.character(doi),
     numeric_year = as.numeric(str_extract(year, "\\d{4}"))
   ) %>%
