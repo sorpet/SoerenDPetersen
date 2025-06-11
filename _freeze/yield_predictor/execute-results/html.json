@@ -2,7 +2,7 @@
   "hash": "9f502ab012a4c9ffec77ca75e31a645e",
   "result": {
     "engine": "knitr",
-    "markdown": "---\n# title: \"Yield predictor\"\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n\n\n\nBelow, you can try a yield predictor model similar to the glm model used in the publication:\n\n*[1] C. T. Petersen, M. K. Langgaard, and S. D. Petersen. \"Yield\nPrediction in Spring Barley from Spectral Reflectance and Weather Data\nUsing Machine Learning\". In: *Soil Use and Management* 39.2 (2023), pp.\n975-987. ISSN: 1475-2743. DOI: 10.1111/sum.12902.\n<https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12902> (visited on\n10/28/2024).*\n\n<iframe class=\"full-width-iframe\" src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\">\n\n</iframe>\n",
+    "markdown": "---\n# title: \"Yield predictor\"\neditor_options: \n  chunk_output_type: console\n---\n\n\n\n\n\nBelow, you can try a yield predictor model similar to the glm model used in the publication:\n\n*[1] C. T. Petersen, M. K. Langgaard, and S. D. Petersen. \"Yield\nPrediction in Spring Barley from Spectral Reflectance and Weather Data\nUsing Machine Learning\". In: *Soil Use and Management* 39.2 (2023), pp.\n975-987. ISSN: 1475-2743. DOI: 10.1111/sum.12902.\n<https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12902> (visited on\n10/28/2024).*\n\n<iframe class=\"full-width-iframe\" src=\"https://f0om03-s0ren-petersen.shinyapps.io/yield_predictor/\" width=\"100%\" height=\"800px\">\n\n</iframe>\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"
