@@ -4,7 +4,7 @@ if (identical(tolower(Sys.getenv("CI")), "true")) {
 }
 
 # ---- CONFIGURE THESE TWO ----
-source_dir <- "/Users/sorpet/code/1_active/1_personal/cv_html"
+source_dir <- "/Users/sorpet/code/cv_html"
 target_dir <- "cv"
 # ------------------------------
 
