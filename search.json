@@ -1,12 +1,5 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Søren D. Petersen",
-    "section": "",
-    "text": "I hold a PhD in Microbiology and have, in parallel, specialized in data science. I believe this combination offers significant untapped potential—both scientifically and commercially.\nI have primarily created this website to learn technical details about the process. But you can also read my CV and see a few examples of digital tools I have developed.\n\n\n\n\n\nSøren D. Petersen"
-  },
-  {
     "objectID": "biofertilizer.html",
     "href": "biofertilizer.html",
     "title": "Søren D. Petersen",
@@ -14,18 +7,18 @@
     "text": "Below, you can explore a network graph of biofertilizer isolates, cultivars, and functions:"
   },
   {
-    "objectID": "teemi.html",
-    "href": "teemi.html",
-    "title": "Søren D. Petersen",
-    "section": "",
-    "text": "Teemi is an open-source Python platform for literate, data-driven engineering of biosystems, supporting simulation, structured data capture, and AI-assisted design under FAIR principles. I led its conceptualization and development to streamline the DBTL cycle, enabling scalable, automated, and hypothesis-driven experimentation in synthetic biology. See reference below:\n[1] S. D. Petersen, L. Levassor, C. M. Pedersen, et al. “Teemi: An Open-Source Literate Programming Approach for Iterative Design-Build-Test-Learn Cycles in Bioengineering”. In: PLOS Computational Biology 20.3 (Mar. 2024), p. e1011929. ISSN: 1553-7358. DOI: 10.1371/journal.pcbi.1011929. https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011929 (visited on 10/28/2024)."
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
     "text": "Biologist"
+  },
+  {
+    "objectID": "teemi.html",
+    "href": "teemi.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "Teemi is an open-source Python platform for literate, data-driven engineering of biosystems, supporting simulation, structured data capture, and AI-assisted design under FAIR principles. I led its conceptualization and development to streamline the DBTL cycle, enabling scalable, automated, and hypothesis-driven experimentation in synthetic biology. See reference below:\n[1] S. D. Petersen, L. Levassor, C. M. Pedersen, et al. “Teemi: An Open-Source Literate Programming Approach for Iterative Design-Build-Test-Learn Cycles in Bioengineering”. In: PLOS Computational Biology 20.3 (Mar. 2024), p. e1011929. ISSN: 1553-7358. DOI: 10.1371/journal.pcbi.1011929. https://journals.plos.org/ploscompbiol/article?id=10.1371/journal.pcbi.1011929 (visited on 10/28/2024)."
   },
   {
     "objectID": "mycoid.html",
@@ -40,5 +33,12 @@
     "title": "Søren D. Petersen",
     "section": "",
     "text": "Below, you can try a yield predictor model similar to the glm model used in the publication:\n[1] C. T. Petersen, M. K. Langgaard, and S. D. Petersen. “Yield Prediction in Spring Barley from Spectral Reflectance and Weather Data Using Machine Learning”. In: Soil Use and Management* 39.2 (2023), pp. 975-987. ISSN: 1475-2743. DOI: 10.1111/sum.12902. https://onlinelibrary.wiley.com/doi/abs/10.1111/sum.12902 (visited on 10/28/2024).*"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Søren D. Petersen",
+    "section": "",
+    "text": "I hold a PhD in Microbiology and have, in parallel, specialized in data science. I believe this combination offers significant untapped potential—both scientifically and commercially.\nI have primarily created this website to learn technical details about the process. But you can also read my CV and see a few examples of digital tools I have developed.\n\n\n\n\n\nSøren D. Petersen"
   }
 ]

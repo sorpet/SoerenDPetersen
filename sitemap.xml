@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/index.html</loc>
-    <lastmod>2025-06-11T07:38:07.458Z</lastmod>
-  </url>
-  <url>
     <loc>https://sorpet.github.io/SoerenDPetersen/biofertilizer.html</loc>
-    <lastmod>2025-06-11T07:38:07.456Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sorpet.github.io/SoerenDPetersen/teemi.html</loc>
-    <lastmod>2025-06-11T07:38:07.459Z</lastmod>
+    <lastmod>2025-08-21T10:38:32.228Z</lastmod>
   </url>
   <url>
     <loc>https://sorpet.github.io/SoerenDPetersen/about.html</loc>
-    <lastmod>2025-06-11T07:38:07.456Z</lastmod>
+    <lastmod>2025-08-21T10:38:32.228Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/teemi.html</loc>
+    <lastmod>2025-08-21T10:38:32.231Z</lastmod>
   </url>
   <url>
     <loc>https://sorpet.github.io/SoerenDPetersen/mycoid.html</loc>
-    <lastmod>2025-06-11T07:38:07.458Z</lastmod>
+    <lastmod>2025-08-21T10:38:32.231Z</lastmod>
   </url>
   <url>
     <loc>https://sorpet.github.io/SoerenDPetersen/yield_predictor.html</loc>
-    <lastmod>2025-06-11T07:38:07.459Z</lastmod>
+    <lastmod>2025-08-21T10:38:32.231Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sorpet.github.io/SoerenDPetersen/index.html</loc>
+    <lastmod>2025-08-21T10:38:32.231Z</lastmod>
   </url>
 </urlset>
