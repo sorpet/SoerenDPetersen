@@ -157,6 +157,42 @@ ul.task-list li input[type="checkbox"] {
 
 
 </main> <!-- /main -->
+<script>
+(function () {
+  function parseLocalDate(value) {
+    var parts = value.split("-").map(Number);
+    return new Date(parts[0], parts[1] - 1, parts[2]);
+  }
+
+  function calculateAge(birthDate, today) {
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var birthdayThisYear = new Date(
+      today.getFullYear(),
+      birthDate.getMonth(),
+      birthDate.getDate()
+    );
+
+    if (today < birthdayThisYear) age -= 1;
+    return age;
+  }
+
+  document.querySelectorAll("[data-birthdate]").forEach(function (element) {
+    var birthDate = parseLocalDate(element.dataset.birthdate);
+    if (Number.isNaN(birthDate.getTime())) return;
+
+    var age = calculateAge(birthDate, new Date());
+    var format = element.dataset.ageFormat || "years-old";
+
+    if (format === "adjective") {
+      element.textContent = age + "-year-old";
+    } else if (format === "number") {
+      element.textContent = age;
+    } else {
+      element.textContent = age + " years old";
+    }
+  });
+}());
+</script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
