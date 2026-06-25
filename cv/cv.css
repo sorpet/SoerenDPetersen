@@ -26,7 +26,8 @@
   margin-left: 0.75rem;
 }
 
-.cv-page .subsection-heading {
+/* Quarto also puts subsection-heading on section wrappers; keep weight on h3 only. */
+.cv-page h3.subsection-heading {
   color: var(--bs-heading-color, #212529);
   font-size: 1.02rem;
   font-weight: 600;
@@ -125,7 +126,7 @@
   font-weight: 400;
 }
 
-#other-communication-activities .subsection-heading {
+#other-communication-activities h3.subsection-heading {
   font-size: 0.98rem;
   font-weight: 500;
 }
