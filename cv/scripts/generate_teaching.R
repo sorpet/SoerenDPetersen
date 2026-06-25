@@ -149,13 +149,35 @@ collapse_course_offerings <- function(df) {
     arrange(desc(date_end_sort), desc(date_start_sort))
 }
 
+format_course_role_label <- function(role, course_level) {
+  glue("{role} in the {course_level} course:")
+}
+
+format_supervision_role_label <- function(role) {
+  role %>%
+    str_replace("^Co-supervisor for PhD project$", "Co-supervisor for PhD student") %>%
+    str_replace("^Co-supervisor for special course$", "Co-supervisor of the special course") %>%
+    str_replace("^Co-supervisor for BSc thesis$", "Co-supervisor of the BSc thesis") %>%
+    str_replace("^Co-supervisor for MSc thesis$", "Co-supervisor of the MSc thesis")
+}
+
+student_role_connector <- function(role_label) {
+  if (str_detect(role_label, "student$")) {
+    " "
+  } else if (str_detect(role_label, "^Co-supervisor of the ")) {
+    " of "
+  } else {
+    " for "
+  }
+}
+
 # Course entry formatter
 row_to_course_html <- function(row) {
-  role_label <- glue("{row$role} in {row$course_level} course:")
+  role_label <- format_course_role_label(row$role, row$course_level)
   course_link <- as.character(format_linked(row$course_name, row$course_link))
   institution_link <- as.character(format_linked(row$institution, row$institution_link))
   title <- paste0(
-    htmlEscape(role_label),
+    as.character(tags$strong(role_label)),
     "\n      ",
     course_link,
     " at ",
@@ -181,10 +203,10 @@ row_to_course_html <- function(row) {
 
 # Student entry formatter
 row_to_student_html <- function(row) {
+  role_label <- format_supervision_role_label(row$role)
   role_line <- paste0(
-    htmlEscape(row$role),
-    "\n",
-    "for ",
+    as.character(tags$strong(role_label)),
+    student_role_connector(role_label),
     htmlEscape(row$student_name),
     " at ",
     as.character(format_linked(row$institution, row$institution_link))
