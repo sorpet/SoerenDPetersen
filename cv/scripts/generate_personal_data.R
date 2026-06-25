@@ -19,7 +19,8 @@ transform_value <- function(key, value) {
     birthdate <- suppressWarnings(ymd(value))
     age <- floor(interval(birthdate, Sys.Date()) / years(1))
     formatted <- format(birthdate, "%B %d, %Y")
-    return(glue("{formatted} ({age} years old)"))
+    birthdate_attr <- format(birthdate, "%Y-%m-%d")
+    return(glue('{formatted} (<span data-birthdate="{birthdate_attr}">{age} years old</span>)'))
   }
   if (key == "Email") {
     return(glue('<a href="mailto:{value}">{value}</a>'))
