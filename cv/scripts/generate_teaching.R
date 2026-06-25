@@ -1,13 +1,14 @@
 library(readr)
 library(dplyr)
 library(glue)
-library(here)
 library(yaml)
 library(htmltools)
 library(purrr)
 library(stringr)
 library(readxl)
 library(httr)
+
+here <- function(...) file.path(getwd(), ...)
 
 is_now_like <- function(x) {
   tolower(trimws(as.character(x))) %in% c("now", "present", "current")
@@ -23,17 +24,20 @@ as_month_date <- function(x) {
 }
 
 format_month_year <- function(x) {
-  format(as_month_date(x), "%b %Y")
+  format(as_month_date(x), "%Y %b")
 }
 
 format_month_year_range <- function(start_date, end_date) {
   start_fmt <- format_month_year(start_date)
 
   if (is_now_like(end_date)) {
-    return(glue("{start_fmt} – now"))
+    return(glue("{start_fmt} – Now"))
   }
 
   end_fmt <- format_month_year(end_date)
+  if (identical(start_fmt, end_fmt)) {
+    return(start_fmt)
+  }
 
   glue("{start_fmt} – {end_fmt}")
 }
@@ -67,7 +71,7 @@ prepare_students_df <- function(df) {
 
 process_teaching_entry <- function(entry) {
   source_df <- read_configured_table(entry, local_keys = c("csv", "xlsx"))
-  html_path <- here::here(entry$html)
+  html_path <- here(entry$html)
 
   if (entry$name == "students") {
     df <- prepare_students_df(source_df)
@@ -96,30 +100,71 @@ collapse_html_lines <- function(lines) {
   paste(htmlEscape(unique(lines)), collapse = "<br>")
 }
 
-build_course_contribution_html <- function(offering_dates, contributions) {
+extract_contribution_parts <- function(contribution) {
+  contribution <- trimws(as.character(contribution))
+  match <- str_match(contribution, "^(.*?)\\s*\\((.*?)\\)\\s*$")
+
+  if (is.na(match[, 1])) {
+    return(tibble::tibble(base = contribution, detail = ""))
+  }
+
+  tibble::tibble(
+    base = str_trim(match[, 2]),
+    detail = match[, 3] %>%
+      str_remove("^with\\s+") %>%
+      str_replace_all("\\s+", " ") %>%
+      str_trim()
+  )
+}
+
+build_course_contribution_html <- function(date_starts, contributions) {
   contribution_df <- tibble::tibble(
-    offering_date = as.character(offering_dates),
+    offering_year = format(as_month_date(date_starts), "%Y"),
     contribution = trimws(as.character(contributions))
   ) %>%
     filter(!is.na(contribution), contribution != "") %>%
-    distinct()
+    distinct() %>%
+    mutate(parts = map(contribution, extract_contribution_parts)) %>%
+    tidyr::unnest(parts)
 
   if (nrow(contribution_df) == 0) {
     return("")
+  }
+
+  if (nrow(contribution_df) == 1) {
+    return(htmlEscape(contribution_df$contribution[[1]]))
   }
 
   if (n_distinct(contribution_df$contribution) == 1) {
     return(htmlEscape(contribution_df$contribution[[1]]))
   }
 
-  lines <- glue("{contribution_df$offering_date}: {contribution_df$contribution}")
-  paste(htmlEscape(lines), collapse = "<br>")
+  if (n_distinct(contribution_df$base) == 1) {
+    detail_lines <- contribution_df %>%
+      filter(nzchar(detail)) %>%
+      arrange(offering_year) %>%
+      transmute(detail_line = glue("{offering_year}: {detail}")) %>%
+      distinct() %>%
+      pull(detail_line)
+
+    if (!length(detail_lines)) {
+      return(htmlEscape(contribution_df$base[[1]]))
+    }
+
+    return(htmlEscape(glue("{contribution_df$base[[1]]} ({paste(detail_lines, collapse = '; ')})")))
+  }
+
+  lines <- contribution_df %>%
+    arrange(offering_year) %>%
+    transmute(line = glue("{offering_year}: {contribution}")) %>%
+    pull(line)
+  htmlEscape(paste(lines, collapse = "; "))
 }
 
 collapse_course_offerings <- function(df) {
   group_cols <- c(
-    "role", "course_level", "course_name", "course_link",
-    "institution", "institution_link"
+    "course_no", "course_link", "course_level", "course_name",
+    "role", "institution", "institution_link", "university"
   )
 
   df %>%
@@ -128,6 +173,10 @@ collapse_course_offerings <- function(df) {
       date_end_sort = case_when(
         is_now_like(date_end) ~ Sys.Date(),
         TRUE ~ as_month_date(date_end)
+      ),
+      date_end_value = case_when(
+        is_now_like(date_end) ~ "now",
+        TRUE ~ as.character(date_end_sort)
       )
     ) %>%
     group_by(across(all_of(group_cols))) %>%
@@ -135,14 +184,23 @@ collapse_course_offerings <- function(df) {
       offerings <- .x %>%
         arrange(desc(date_end_sort), desc(date_start_sort))
 
+      latest_end <- if (any(is_now_like(offerings$date_end_value))) {
+        "now"
+      } else {
+        as.character(max(offerings$date_end_sort, na.rm = TRUE))
+      }
+
       tibble::tibble(
-        date_html = collapse_html_lines(offerings$date),
+        date_html = format_month_year_range(
+          min(offerings$date_start_sort, na.rm = TRUE),
+          latest_end
+        ),
         contribution_html = build_course_contribution_html(
-          offerings$date,
+          offerings$date_start,
           offerings$contribution
         ),
-        date_end_sort = max(offerings$date_end_sort),
-        date_start_sort = min(offerings$date_start_sort)
+        date_end_sort = max(offerings$date_end_sort, na.rm = TRUE),
+        date_start_sort = min(offerings$date_start_sort, na.rm = TRUE)
       )
     }) %>%
     ungroup() %>%
@@ -150,7 +208,15 @@ collapse_course_offerings <- function(df) {
 }
 
 format_course_role_label <- function(role, course_level) {
-  glue("{role} in the {course_level} course:")
+  glue("{role} in the {course_level} course")
+}
+
+format_course_title <- function(course_name, course_no) {
+  if (!is.na(course_no) && nzchar(course_no)) {
+    return(glue("{course_name} (# {course_no})"))
+  }
+
+  course_name
 }
 
 format_supervision_role_label <- function(role) {
@@ -174,14 +240,18 @@ student_role_connector <- function(role_label) {
 # Course entry formatter
 row_to_course_html <- function(row) {
   role_label <- format_course_role_label(row$role, row$course_level)
-  course_link <- as.character(format_linked(row$course_name, row$course_link))
+  course_link <- as.character(format_linked(
+    format_course_title(row$course_name, row$course_no),
+    row$course_link
+  ))
   institution_link <- as.character(format_linked(row$institution, row$institution_link))
   title <- paste0(
     as.character(tags$strong(role_label)),
-    "\n      ",
+    " ",
     course_link,
     " at ",
-    institution_link
+    institution_link,
+    "."
   )
 
   contribution_tag <- if (!is.na(row$contribution_html) && row$contribution_html != "") {

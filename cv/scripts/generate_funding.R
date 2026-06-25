@@ -5,7 +5,8 @@ library(glue)
 library(purrr)
 library(stringr)
 library(scales)
-library(here)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 

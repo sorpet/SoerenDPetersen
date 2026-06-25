@@ -1,13 +1,29 @@
-library(bibtex)
-library(RefManageR)
+publication_packages_available <- requireNamespace("RefManageR", quietly = TRUE)
+
+if (!publication_packages_available) {
+  library(yaml)
+
+  here <- function(...) file.path(getwd(), ...)
+  source(here("R", "utils_cv.R"))
+
+  config <- yaml::read_yaml(here("data", "paths.yml"))
+  output_path <- here(config$publications$html)
+
+  if (isTRUE(config$publications$preserve_existing_html) && file.exists(output_path)) {
+    message("✅ publications.html preserved; RefManageR is not installed.")
+  } else {
+    stop("RefManageR is required to regenerate publications.html")
+  }
+} else {
 library(dplyr)
 library(stringr)
 library(purrr)
 library(glue)
 library(readr)
-library(here)
 library(yaml)
 library(htmltools)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 
@@ -186,7 +202,7 @@ generate_html_list <- function(df) {
 paths <- load_publication_paths()
 stopifnot(file.exists(paths$bib))
 
-bib_entries <- ReadBib(paths$bib, check = FALSE, .Encoding = "UTF-8")
+bib_entries <- RefManageR::ReadBib(paths$bib, check = FALSE, .Encoding = "UTF-8")
 
 bib_df <- tibble::tibble(
   bibtype = sapply(bib_entries, function(x) x$bibtype),
@@ -261,4 +277,5 @@ if (isTRUE(paths$preserve_existing_html) && file.exists(paths$html)) {
   message("✅ publications.html preserved from current baseline.")
 } else {
   save_html_output(html_block, paths$html)
+}
 }

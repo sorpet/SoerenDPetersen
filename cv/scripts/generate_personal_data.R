@@ -3,8 +3,9 @@ library(dplyr)
 library(glue)
 library(stringr)
 library(lubridate)
-library(here)
 library(yaml)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 

@@ -10,7 +10,7 @@ format:
     toc: true
 ---
 
-:::::::::::::: cv-page
+::::::::::::::: cv-page
 <p class="cv-updated">
 
 Updated <span id="cv-date"></span>
@@ -174,7 +174,7 @@ In addition to the above-mentioned communication activities, I have regularly pr
 ```{=html}
 {{< include content_html/publications.html >}}
 ```
-::::::::::::::
+:::::::::::::::
 
 ```{=html}
 <script>

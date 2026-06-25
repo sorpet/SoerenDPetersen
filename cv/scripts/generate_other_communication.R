@@ -3,10 +3,11 @@ library(purrr)
 library(readr)
 library(dplyr)
 library(glue)
-library(here)
 library(stringr)
 library(lubridate)
 library(htmltools)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 
@@ -88,7 +89,7 @@ standardize_communication_columns <- function(df) {
 }
 
 process_communication_entry <- function(entry) {
-  html_path <- here::here(entry$html)
+  html_path <- here(entry$html)
 
   df <- read_configured_table(entry, local_keys = c("csv", "xlsx")) %>%
     standardize_communication_columns() %>%

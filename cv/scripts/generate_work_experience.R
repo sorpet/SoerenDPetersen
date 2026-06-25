@@ -1,11 +1,12 @@
 #!/usr/bin/env Rscript
 library(dplyr)
 library(glue)
-library(here)
 library(htmltools)
 library(purrr)
 library(stringr)
 library(yaml)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 source(here("R", "publications_cv.R"))

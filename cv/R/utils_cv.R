@@ -2,12 +2,16 @@ library(stringr)
 library(glue)
 library(lubridate)
 
+if (!exists("here", mode = "function")) {
+  here <- function(...) file.path(getwd(), ...)
+}
+
 `%||%` <- function(a, b) if (is.null(a) || is.na(a)) b else a
 
 resolve_local_path <- function(path) {
   if (is.null(path) || is.na(path) || path == "") return(NULL)
   if (grepl("^/", path)) return(path)
-  here::here(path)
+  here(path)
 }
 
 local_path_exists <- function(path) {

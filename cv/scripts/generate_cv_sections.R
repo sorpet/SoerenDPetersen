@@ -1,4 +1,4 @@
-library(here)
+here <- function(...) file.path(getwd(), ...)
 
 message("🔧 Loading utilities...")
 source(here("R", "utils_cv.R"))

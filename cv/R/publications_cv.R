@@ -1,12 +1,11 @@
-library(bibtex)
-library(RefManageR)
 library(dplyr)
 library(glue)
-library(here)
 library(purrr)
 library(stringr)
 library(tibble)
 library(yaml)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 
@@ -101,7 +100,11 @@ format_authors <- function(authors, has_footnote = FALSE) {
 }
 
 load_publications_df <- function(bib_path) {
-  bib_entries <- ReadBib(bib_path, check = FALSE, .Encoding = "UTF-8")
+  if (!requireNamespace("RefManageR", quietly = TRUE)) {
+    return(tibble(doi = character(), index = integer()))
+  }
+
+  bib_entries <- RefManageR::ReadBib(bib_path, check = FALSE, .Encoding = "UTF-8")
 
   tibble(
     bibtype = sapply(bib_entries, function(x) x$bibtype),

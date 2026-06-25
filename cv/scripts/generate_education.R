@@ -2,10 +2,11 @@ library(yaml)
 library(readr)
 library(stringr)
 library(glue)
-library(here)
 library(purrr)
 library(readxl)
 library(htmltools)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 

@@ -1,7 +1,8 @@
 #!/usr/bin/env Rscript
 library(glue)
-library(here)
 library(yaml)
+
+here <- function(...) file.path(getwd(), ...)
 
 source(here("R", "utils_cv.R"))
 
