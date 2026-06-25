@@ -1,53 +1,73 @@
 funding:
+  csv: data/snapshots/funding.csv
+  source_xlsx: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/0105_funding_occassions/funding_occassions.xlsx
   xlsx_gdrive: https://docs.google.com/spreadsheets/d/16n2xNlNDAR5zjgG3LBhWsWrCE7yYDr7M/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  html: content_html/funding.html
   md: content_md/funding.md
 
 teaching:
   - name: courses
+    csv: data/snapshots/teaching_courses.csv
+    source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0300_teaching_course/teaching_course.csv
     xlsx_gdrive: https://docs.google.com/spreadsheets/d/1acOnUwsMcLEQp4L8TvKV0Gw0MVJ3kUXw/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
-    csv: data/teaching_courses.csv
     html: content_html/teaching_courses.html
   - name: students
+    csv: data/snapshots/teaching_students.csv
+    source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0350_teaching_students/teaching_students.csv
     xlsx_gdrive: https://docs.google.com/spreadsheets/d/1O06kA-TYP_TutdPNspr6CsGYCpGDLDZJ/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
-    csv: data/teaching_students.csv
     html: content_html/teaching_students.html
 
 publications:
+  bib: data/snapshots/publications.bib
+  source_bib: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0125_publications/publications.bib
   bib_gdrive: https://drive.google.com/file/d/1gmCUhK2W5I36RmW7uQTBzoJbUhon1SPf/view?usp=sharing
-  bib: data/publications.bib
   html: content_html/publications.html
+  preserve_existing_html: true
 
-# Configuration for automatic publication summary
 publication_summary:
-  # Path to output markdown for publication summary
   md: content_md/publication_summary.md
-  # Google Scholar author ID
+  html: content_html/publication_summary.html
   scholar_id: prKV9NwAAAAJ
-  # ORCID identifier
   orcid: "0000-0003-4104-5144"
+  metrics:
+    peer_reviewed_journal_publications: 10
+    first_author: 4
+    last_author: 1
+    notable_index: 5
+    notable_citations: 347
+    notable_note: I have shared first-authorship with Dr. Zhang
+    h_index: 7
+    total_citations: 564
+    as_of_label: Jun 2026
 
 personal_data:
+  csv: data/snapshots/personal_data.csv
+  source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/personal_data.csv
   csv_gdrive: https://drive.google.com/file/d/1GXrVbxLNZg4Pl5dHe_V5tKHfZTMiwlhO/view?usp=sharing
-  csv: data/personal_data.csv
   html: content_html/personal_data.html
+  exclude_keys:
+    - Phone
 
 education:
+  csv: data/snapshots/education.csv
+  source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/education.csv
   xlsx_gdrive: https://docs.google.com/spreadsheets/d/1f53i3UHINbN2Y4irjcp3B57S0Rb4pSCu/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
-  xlsx: data/education.xlsx
   html: content_html/education.html
 
 communications:
   - name: conferences
+    csv: data/snapshots/communication_conferences.csv
+    source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0400_conferences/communication_conferences.csv
     xlsx_gdrive: https://docs.google.com/spreadsheets/d/1NCTJLN8AEzJYNL77bgo0W5IMZl_5f2pT/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
-    csv: data/communication_conferences.csv
     html: content_html/communication_conferences.html
   - name: workshops
+    csv: data/snapshots/communication_workshops.csv
+    source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0400_conferences/communication_workshops.csv
     xlsx_gdrive: https://docs.google.com/spreadsheets/d/1AMUyZiRJcb84obRrtMW3x_-MSiA6oSzj/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
-    csv: data/communication_workshops.csv
     html: content_html/communication_workshops.html
 
 work_experience:
+  csv: data/snapshots/work_experience.csv
+  source_xlsx: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/work_experience.xlsx
   xlsx_gdrive: https://docs.google.com/spreadsheets/d/1dvk_ABNWb9Ccp1rNSxKIVmKt14TAtqyD/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
-  csv: data/work_experience.csv
   html: content_html/work_experience.html
-

@@ -1,8 +1,9 @@
 project:
   type: website
   output-dir: _site
-  resources:
-    - "cv/**"
+  render:
+    - "*.qmd"
+    - "cv/index.qmd"
 
 website:
   title: "Søren D. Petersen"
@@ -21,16 +22,16 @@ website:
             text: Sequence Chromatogram Viewer
 
       - text: CV
-        href: cv/main.html
+        href: cv/index.qmd
       # - about.qmd
 
     right:
-      - icon: fa-github
+      - icon: github
         href: https://github.com/sorpet
-        text: "<i class='fab fa-github'></i> GitHub"
-      - icon: fa-linkedin
-        href: https://www.linkedin.com/in/soerendpetersen  # Replace with your LinkedIn profile URL
-        text: "LinkedIn"
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/soerendpetersen
+        aria-label: LinkedIn
 
 format:
   html:

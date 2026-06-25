@@ -1,0 +1,187 @@
+---
+title: "Curriculum Vitae"
+subtitle: "Søren Dalsgård Petersen"
+pagetitle: "Søren Dalsgård Petersen - CV"
+body-class: cv-page
+format:
+  html:
+    css: cv.css
+    page-layout: article
+    toc: true
+---
+
+:::::::::::::: cv-page
+<p class="cv-updated">
+
+Updated <span id="cv-date"></span>
+
+</p>
+
+## Personal Data
+
+:::: cv-section-body
+::: personal-container
+```{=html}
+<dl class="personal-data-list">
+{{< include content_html/personal_data.html >}}
+</dl>
+```
+
+![Søren Dalsgård Petersen](images/profile.jpg){.profile-pic}
+:::
+::::
+
+## Research Profile and Vision: Data Science for Fungal Biotechnology
+
+::: cv-section-body
+```{=html}
+{{< include content_html/research_profile.html >}}
+```
+:::
+
+## Leadership
+
+::: cv-section-body
+```{=html}
+{{< include content_html/leadership.html >}}
+```
+:::
+
+## Research applications and funding
+
+::: cv-section-body
+```{=html}
+{{< include content_html/funding.html >}}
+```
+:::
+
+## Skills
+
+::: {.cv-section-body .skills}
+General competencies within data science and microbiology. Some specific competencies:
+
+<p class="skill-group-heading">
+
+Data Science
+
+</p>
+
+```{=html}
+<dl class="skill-indent">
+<dt>Programming paradigms</dt>
+<dd>Functional Programming</dd>
+<dt>Languages and packages</dt>
+<dd>Python (NumPy, SciPy, Pandas, Matplotlib, Plotly, Scikit-learn), R (Tidyverse, dplyr, tidyr, purr, ggplot, tidymodels), SQL, BASH</dd>
+<dt>Software tools</dt>
+<dd>Git, <a href="https://github.com/sorpet" target="_blank">GitHub</a>, UNIX commands</dd>
+<dt>Databases</dt>
+<dd>Design, deployment, and maintenance of relational databases (PostgreSQL)</dd>
+<dt>Cloud providers</dt>
+<dd>Amazon Web Services (S3, RDBMS)</dd>
+<dt>Data science and modelling</dt>
+<dd>tidymodels, Scikit-learn, H2O (framework for e.g. deep learning), JBEI ART (<a href="https://www.nature.com/articles/s41467-020-18008-4" target="_blank">Automated Recommendation Tool</a>), Teselagen Evolve module</dd>
+</dl>
+```
+
+<p class="skill-group-heading">
+
+Microbiology
+
+</p>
+
+```{=html}
+<dl class="skill-indent">
+<dt>Organisms</dt>
+<dd><em>S. cerevisiae</em>, <em>E. coli</em>, and mammalian cells (<em>CHO</em>)</dd>
+<dt>S. cerevisiae techniques</dt>
+<dd>Cell culture, CRISPR-Cas9 genome editing, cell library construction</dd>
+<dt>Molecular biology</dt>
+<dd>Oligo libraries, USER cloning, Gibson assembly</dd>
+<dt>Assays</dt>
+<dd>Flow cytometry and cell sorting, Illumina NGS, Biosensors</dd>
+</dl>
+```
+:::
+
+## Education
+
+::: cv-section-body
+```{=html}
+{{< include content_html/education.html >}}
+```
+:::
+
+## Work/professional experience (exclusive teaching)
+
+::: cv-section-body
+```{=html}
+{{< include content_html/work_experience.html >}}
+```
+:::
+
+## Academic Service and Professional Activities
+
+::: cv-section-body
+```{=html}
+{{< include content_html/academic_service.html >}}
+```
+:::
+
+## Teaching
+
+::: cv-section-body
+### Courses {.subsection-heading}
+
+```{=html}
+{{< include content_html/teaching_courses.html >}}
+```
+
+### Student Supervision {.subsection-heading}
+
+```{=html}
+{{< include content_html/teaching_students.html >}}
+```
+:::
+
+## Other communication activities
+
+::: cv-section-body
+### National and international peer reviewed conference contributions [(presenters are underscored)]{.annotation} {.subsection-heading}
+
+```{=html}
+{{< include content_html/communication_conferences.html >}}
+```
+
+### International workshop contributions [(presenters are underscored)]{.annotation} {.subsection-heading}
+
+```{=html}
+{{< include content_html/communication_workshops.html >}}
+```
+
+In addition to the above-mentioned communication activities, I have regularly presented at internal seminars at the Section for Synthetic Biology, DTU; the Novo Nordisk Foundation Center for Biosustainability, DTU; and the Joint BioEnergy Institute, San Francisco.
+:::
+
+## Publication summary
+
+::: cv-section-body
+```{=html}
+{{< include content_html/publication_summary.html >}}
+```
+:::
+
+## Publications
+
+```{=html}
+{{< include content_html/publications.html >}}
+```
+::::::::::::::
+
+```{=html}
+<script>
+const cvDate = new Date().toLocaleDateString('en-GB', {
+  year: 'numeric',
+  month: 'long'
+});
+document.getElementById('cv-date').textContent = cvDate;
+</script>
+```
