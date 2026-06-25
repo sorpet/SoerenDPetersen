@@ -1,7 +1,11 @@
 funding:
   csv: data/snapshots/funding.csv
   source_xlsx: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/0105_funding_occassions/funding_occassions.xlsx
-  xlsx_gdrive: https://docs.google.com/spreadsheets/d/16n2xNlNDAR5zjgG3LBhWsWrCE7yYDr7M/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  canonical_drive:
+    type: xlsx_projection
+    url: https://docs.google.com/spreadsheets/d/16n2xNlNDAR5zjgG3LBhWsWrCE7yYDr7M/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/0105_funding_occassions/funding_occassions.xlsx
+    snapshot: data/snapshots/funding.csv
   html: content_html/funding.html
   md: content_md/funding.md
 
@@ -9,18 +13,30 @@ teaching:
   - name: courses
     csv: data/snapshots/teaching_courses.csv
     source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0300_teaching_course/teaching_course.csv
-    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1acOnUwsMcLEQp4L8TvKV0Gw0MVJ3kUXw/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    canonical_drive:
+      type: csv
+      url: https://drive.google.com/file/d/1qPd9TwWUv1U2m8gE5R2Kf17kJEoqHbyH/view?usp=sharing
+      local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0300_teaching_course/teaching_course.csv
+      snapshot: data/snapshots/teaching_courses.csv
     html: content_html/teaching_courses.html
   - name: students
     csv: data/snapshots/teaching_students.csv
     source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0350_teaching_students/teaching_students.csv
-    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1O06kA-TYP_TutdPNspr6CsGYCpGDLDZJ/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    canonical_drive:
+      type: csv
+      url: https://drive.google.com/file/d/1jSvA6-rppSxGTiIDok9sxd9JEEyTKMfw/view?usp=sharing
+      local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0350_teaching_students/teaching_students.csv
+      snapshot: data/snapshots/teaching_students.csv
     html: content_html/teaching_students.html
 
 publications:
   bib: data/snapshots/publications.bib
   source_bib: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0125_publications/publications.bib
-  bib_gdrive: https://drive.google.com/file/d/1gmCUhK2W5I36RmW7uQTBzoJbUhon1SPf/view?usp=sharing
+  canonical_drive:
+    type: bib
+    url: https://drive.google.com/file/d/1gmCUhK2W5I36RmW7uQTBzoJbUhon1SPf/view?usp=sharing
+    local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0125_publications/publications.bib
+    snapshot: data/snapshots/publications.bib
   html: content_html/publications.html
   preserve_existing_html: true
 
@@ -44,6 +60,11 @@ personal_data:
   csv: data/snapshots/personal_data.csv
   source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/personal_data.csv
   csv_gdrive: https://drive.google.com/file/d/1GXrVbxLNZg4Pl5dHe_V5tKHfZTMiwlhO/view?usp=sharing
+  canonical_drive:
+    type: csv
+    url: https://drive.google.com/file/d/1GXrVbxLNZg4Pl5dHe_V5tKHfZTMiwlhO/view?usp=sharing
+    local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/personal_data.csv
+    snapshot: data/snapshots/personal_data.csv
   html: content_html/personal_data.html
   exclude_keys:
     - Phone
@@ -51,23 +72,40 @@ personal_data:
 education:
   csv: data/snapshots/education.csv
   source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/education.csv
-  xlsx_gdrive: https://docs.google.com/spreadsheets/d/1f53i3UHINbN2Y4irjcp3B57S0Rb4pSCu/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  canonical_drive:
+    type: csv
+    url: https://drive.google.com/file/d/18KDTVhn_61-5vyHPNaLvjdXqMUBOToIC/view?usp=sharing
+    local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/education.csv
+    snapshot: data/snapshots/education.csv
   html: content_html/education.html
 
 communications:
   - name: conferences
     csv: data/snapshots/communication_conferences.csv
     source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0400_conferences/communication_conferences.csv
-    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1NCTJLN8AEzJYNL77bgo0W5IMZl_5f2pT/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    canonical_drive:
+      type: csv
+      url: https://drive.google.com/file/d/1ry4uHuMBxeiNcnSTesyGQA5nQ7ARUiXU/view?usp=sharing
+      local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0400_conferences/communication_conferences.csv
+      snapshot: data/snapshots/communication_conferences.csv
     html: content_html/communication_conferences.html
   - name: workshops
     csv: data/snapshots/communication_workshops.csv
     source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0400_conferences/communication_workshops.csv
-    xlsx_gdrive: https://docs.google.com/spreadsheets/d/1AMUyZiRJcb84obRrtMW3x_-MSiA6oSzj/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+    canonical_drive:
+      type: csv
+      url: https://drive.google.com/file/d/1DhWJb4eokM-sUpbShFtjRzOTcdpXOSPa/view?usp=sharing
+      local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/0400_conferences/communication_workshops.csv
+      snapshot: data/snapshots/communication_workshops.csv
     html: content_html/communication_workshops.html
 
 work_experience:
   csv: data/snapshots/work_experience.csv
+  source_csv: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/0050_jobs/jobs.csv
   source_xlsx: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/1000_science_projects/work_experience.xlsx
-  xlsx_gdrive: https://docs.google.com/spreadsheets/d/1dvk_ABNWb9Ccp1rNSxKIVmKt14TAtqyD/edit?usp=sharing&ouid=111380865866855889671&rtpof=true&sd=true
+  canonical_drive:
+    type: csv_projection
+    url: https://drive.google.com/file/d/1QY4GmXhMcxfb3ktWuOSXwOwbu4llZbN2/view?usp=sharing
+    local_path: /Users/sorpet/Library/CloudStorage/CloudMounter-SDP_gdrive/0050_jobs/jobs.csv
+    snapshot: data/snapshots/work_experience.csv
   html: content_html/work_experience.html
