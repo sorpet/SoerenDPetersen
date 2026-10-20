@@ -71,7 +71,7 @@
   border-radius: 0.5rem;
   margin-left: auto;
   max-width: 35vw;
-  width: 9rem;
+  width: 8rem;
 }
 
 .cv-page .skill-indent {
@@ -173,8 +173,8 @@
 
   .cv-page .profile-pic {
     margin-left: 0;
-    max-width: 12rem;
-    width: 45vw;
+    max-width: 10.5rem;
+    width: 40vw;
   }
 
   .cv-page .personal-data-list,

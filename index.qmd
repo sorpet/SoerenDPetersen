@@ -17,6 +17,6 @@ This website gathers my CV and a few examples of digital tools I have developed.
 ::::
 
 ::: {.column width="30%"}
-![Søren D. Petersen](images/profile.jpg){style="border-radius: 10px; max-width: 100%;"}
+![Søren D. Petersen](images/profile-cropped.jpg){style="border-radius: 10px; display: block; margin: 0 auto; max-width: 88%;"}
 :::
 ::::::
