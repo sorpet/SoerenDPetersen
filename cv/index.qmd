@@ -13,7 +13,7 @@ format:
 ::::::::::::::: cv-page
 <p class="cv-updated">
 
-Updated <span id="cv-date"></span>
+Updated
 
 </p>
 
@@ -27,7 +27,7 @@ Updated <span id="cv-date"></span>
 </dl>
 ```
 
-![Søren Dalsgård Petersen](images/profile.jpg){.profile-pic}
+<img src="images/profile.jpg" alt="Søren Dalsgård Petersen" class="profile-pic"/>
 :::
 ::::
 
